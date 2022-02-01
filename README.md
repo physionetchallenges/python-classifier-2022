@@ -1,8 +1,8 @@
-# Python example code for the George B. Moody PhysioNet/Computing in Cardiology Challenge 2022
+# Python example classifier code for the George B. Moody PhysioNet Challenge 2022
 
 ## What's in this repository?
 
-This repository contains a simple example to illustrate how to format a Python entry for the 2022 Challenge. You can try it by running the following commands on the Challenge training sets. These commands should take a few minutes or less to run from start to finish on a recent personal computer.
+This repository contains a simple example to illustrate how to format a Python entry for the George B. Moody PhysioNet Challenge 2022.. You can try it by running the following commands on the Challenge training sets. These commands should take a few minutes or less to run from start to finish on a recent personal computer.
 
 For this example, we implemented a random forest classifier with several features. You can use a different classifier, features, and libraries for your entry. This simpple example is designed **not** not to perform well, so you should **not** use it as a baseline for your model's performance.
 
@@ -21,11 +21,11 @@ You can train and run your model by running
 
 where `training_data` is a folder with the training data files, `model` is a folder for saving your model, `test_data` is a folder with the test data files (you can use the training data for debugging and cross-validation), and `test_outputs` is a folder for saving your model outputs. The [2022 Challenge website](https://physionetchallenges.org/2022/) provides a training database with a description of the contents and structure of the data files.
 
-You can evaluate your model by running
+You can evaluate your model by pulling or downloading the [evaluation code](https://github.com/physionetchallenges/evaluation-2022) and running
 
     python evaluate_model.py labels outputs scores.csv class_scores.csv
 
-where `labels` is a folder containing files with one or more labels for each ECG recording, such as the training database on the Challenge website; `outputs` is a folder containing files with outputs produced by your models for those recordings; `scores.csv` (optional) is a collection of scores for your models; and `class_scores.csv` (optional) is a collection of per-class scores for your models.
+where `labels` is a folder with labels for the data, such as the training database on the PhysioNet webpage; `outputs` is a folder containing files with your model's outputs ofr th edata; `scores.csv` (optional) is a collection of scores for your model; and `class_scores.csv` (optional) is a collection of per-class scores for your model.
 
 ## Which scripts I can edit?
 
@@ -104,11 +104,12 @@ If you have trouble running your code, then please try the follow steps to run t
 
 ## How do I learn more?
 
-Please see the [2022 Challenge website](https://physionetchallenges.org/2022/) for more details. Please post questions and concerns on the [Challenge discussion forum](https://groups.google.com/forum/#!forum/physionet-challenges).
+Please see the [Challenge website](https://physionetchallenges.org/2022/) for more details. Please post questions and concerns on the [Challenge discussion forum](https://groups.google.com/forum/#!forum/physionet-challenges).
 
 ## Useful links
 
-* [2022 Challenge website](https://physionetchallenges.org/2022/)
-* [MATLAB example code](https://github.com/physionetchallenges/matlab-classifier-2022)
+* [Challenge website](https://physionetchallenges.org/2022/)
+* [MATLAB example classifier code](https://github.com/physionetchallenges/matlab-classifier-2022)
+* [Scoring code](https://github.com/physionetchallenges/evaluation-2022)
 * [Frequently asked questions (FAQ) for this year's Challenge](https://physionetchallenges.org/2022/faq/) 
 * [Frequently asked questions (FAQ) about the Challenges in general](https://physionetchallenges.org/faq/) 
