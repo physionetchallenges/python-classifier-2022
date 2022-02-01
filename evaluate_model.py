@@ -276,7 +276,7 @@ def compute_f_measure(labels, outputs):
 def compute_challenge_score(labels, outputs, classes):
     # Define costs. Load these costs from an external file instead of defining them here.
     c_algorithm =     1
-    c_expert    =   200
+    c_expert    =   250
     c_treatment =  1000
     c_error     = 10000
     alpha       =   0.5
@@ -306,7 +306,7 @@ def compute_challenge_score(labels, outputs, classes):
     n_total = n_positive + n_unknown + n_negative
 
     total_score = c_algorithm * n_total \
-        + c_expert * (n_tp + n_fpu + n_fp + n_fup + 2 * n_tu + n_fun) \
+        + c_expert * (n_tp + 2 * n_fpu + n_fp + n_fup + 2 * n_tu + n_fun) \
         + c_treatment * (n_tp + alpha * n_fpu + n_fup + alpha * n_tu) \
         + c_error * (n_fn + alpha * n_fnu)
     challenge_score = total_score / n_total
