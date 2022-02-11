@@ -25,7 +25,7 @@ You can evaluate your model by pulling or downloading the [evaluation code](http
 
     python evaluate_model.py labels outputs scores.csv class_scores.csv
 
-where `labels` is a folder with labels for the data, such as the training database on the PhysioNet webpage; `outputs` is a folder containing files with your model's outputs ofr th edata; `scores.csv` (optional) is a collection of scores for your model; and `class_scores.csv` (optional) is a collection of per-class scores for your model.
+where `labels` is a folder with labels for the data, such as the training database on the PhysioNet webpage; `outputs` is a folder containing files with your model's outputs for the data; `scores.csv` (optional) is a collection of scores for your model; and `class_scores.csv` (optional) is a collection of per-class scores for your model.
 
 ## Which scripts I can edit?
 
@@ -39,7 +39,6 @@ Please do **not** edit the following scripts. We will use the unedited versions 
 
 * `train_model.py` is a script for training your model.
 * `run_model.py` is a script for running your trained model.
-* `evaluate_model.py` is a script with evaluating your model.
 * `helper_code.py` is a script with helper functions that we used for our code. You are welcome to use them in your code.
 
 These scripts must remain in the root path of your repository, but you can put other scripts and other files elsewhere in your repository.
