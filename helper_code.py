@@ -30,9 +30,9 @@ def is_finite_number(x):
 # Compare normalized strings.
 def compare_strings(x, y):
     try:
-        return x.strip().casefold()==y.strip().casefold()
+        return str(x).strip().casefold()==str(y).strip().casefold()
     except AttributeError: # For Python 2.x compatibility
-        return x.strip().lower()==y.strip().lower()
+        return str(x).strip().lower()==str(y).strip().lower()
 
 # Find patient data files.
 def find_patient_files(data_folder):
@@ -108,6 +108,19 @@ def get_num_locations(data):
             break
     return num_locations
 
+# Get frequency from patient data.
+def get_frequency(data):
+    frequency = None
+    for i, l in enumerate(data.split('\n')):
+        if i==0:
+            try:
+                frequency = float(l.split(' ')[2])
+            except:
+                pass
+        else:
+            break
+    return frequency
+
 # Get recording locations from patient data.
 def get_locations(data):
     num_locations = get_num_locations(data)
@@ -121,19 +134,6 @@ def get_locations(data):
         else:
             break
     return locations
-
-# Get frequency from patient data.
-def get_frequency(data):
-    frequency = None
-    for i, l in enumerate(data.split('\n')):
-        if i==0:
-            try:
-                frequency = float(l.split(' ')[2])
-            except:
-                pass
-        else:
-            break
-    return frequency
 
 # Get age from patient data.
 def get_age(data):
@@ -199,11 +199,13 @@ def get_label(data):
                 label = l.split(': ')[1]
             except:
                 pass
+    if label is None:
+        raise ValueError('No label available. Is your code trying to load labels from the hidden data?')
     return label
 
 # Sanitize binary values from Challenge outputs.
 def sanitize_binary_value(x):
-    x = x.replace('"', '').replace("'", "").strip() # Remove any quotes or invisible characters.
+    x = str(x).replace('"', '').replace("'", "").strip() # Remove any quotes or invisible characters.
     if (is_finite_number(x) and float(x)==1) or (x in ('True', 'true', 'T', 't')):
         return 1
     else:
@@ -211,8 +213,8 @@ def sanitize_binary_value(x):
 
 # Santize scalar values from Challenge outputs.
 def sanitize_scalar_value(x):
-    x = x.replace('"', '').replace("'", "").strip() # Remove any quotes or invisible characters.
-    if is_finite_number(x) or (is_number(x) and (float(x)==float('inf') or float(x)==-float('inf'))):
+    x = str(x).replace('"', '').replace("'", "").strip() # Remove any quotes or invisible characters.
+    if is_finite_number(x) or (is_number(x) and np.isinf(float(x))):
         return float(x)
     else:
         return 0.0
@@ -220,11 +222,11 @@ def sanitize_scalar_value(x):
 # Save Challenge outputs.
 def save_challenge_outputs(filename, patient_id, classes, labels, probabilities):
     # Format Challenge outputs.
-    recording_string = '#{}'.format(patient_id)
+    patient_string = '#{}'.format(patient_id)
     class_string = ','.join(str(c) for c in classes)
     label_string = ','.join(str(l) for l in labels)
     probabilities_string = ','.join(str(p) for p in probabilities)
-    output_string = recording_string + '\n' + class_string + '\n' + label_string + '\n' + probabilities_string + '\n'
+    output_string = patient_string + '\n' + class_string + '\n' + label_string + '\n' + probabilities_string + '\n'
 
     # Write the Challenge outputs.
     with open(filename, 'w') as f:
@@ -235,7 +237,7 @@ def load_challenge_outputs(filename):
     with open(filename, 'r') as f:
         for i, l in enumerate(f):
             if i==0:
-                patient_id = l[1:] if len(l)>1 else None
+                patient_id = l.replace('#', '').strip()
             elif i==1:
                 classes = tuple(entry.strip() for entry in l.split(','))
             elif i==2:
