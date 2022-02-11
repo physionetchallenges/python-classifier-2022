@@ -116,7 +116,7 @@ def get_locations(data):
         entries = l.split(' ')
         if i==0:
             pass
-        elif 1<=i<=num_locations+1:
+        elif 1<=i<=num_locations:
             locations.append(entries[0])
         else:
             break
@@ -128,7 +128,7 @@ def get_frequency(data):
     for i, l in enumerate(data.split('\n')):
         if i==0:
             try:
-                frequency = float(l.split(' ')[1])
+                frequency = float(l.split(' ')[2])
             except:
                 pass
         else:
@@ -185,7 +185,7 @@ def get_pregnancy_status(data):
     for l in data.split('\n'):
         if l.startswith('#Pregnancy status:'):
             try:
-                is_pregnant = bool(l.split(': ')[1].strip())
+                is_pregnant = bool(sanitize_binary_value(l.split(': ')[1].strip()))
             except:
                 pass
     return is_pregnant
