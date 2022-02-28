@@ -14,12 +14,26 @@ You can install the dependencies for these scripts by creating a Docker image (s
 
     pip install requirements.txt
 
-You can train and run your model by running
+You can train you model by running
 
     python train_model.py training_data model
+
+where
+
+- `training_data` (input; required) is a folder with the training data files and
+- `model` (output; required) is a folder for saving your model.
+
+You can train you trained model by running
+
     python run_model.py model test_data test_outputs
 
-where `training_data` is a folder with the training data files, `model` is a folder for saving your model, `test_data` is a folder with the test data files (you can use the training data for debugging and cross-validation), and `test_outputs` is a folder for saving your model outputs. The [2022 Challenge website](https://physionetchallenges.org/2022/) provides a training database with a description of the contents and structure of the data files.
+where
+
+- `model` (input; required) is a folder for loading your model, and
+- `test_data` (input; required) is a folder with the validation or test data files (you can use the training data for debugging and cross-validation), and
+- `test_outputs` is a folder for saving your model outputs.
+
+The [2022 Challenge website](https://physionetchallenges.org/2022/#data) provides a training database with a description of the contents and structure of the data files.
 
 You can evaluate your model by pulling or downloading the [evaluation code](https://github.com/physionetchallenges/evaluation-2022) and running
 
