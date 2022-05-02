@@ -190,18 +190,31 @@ def get_pregnancy_status(data):
                 pass
     return is_pregnant
 
-# Get labels from patient data.
-def get_label(data):
-    label = None
+# Get murmur from patient data.
+def get_murmur(data):
+    murmur = None
     for l in data.split('\n'):
         if l.startswith('#Murmur:'):
             try:
-                label = l.split(': ')[1]
+                murmur = l.split(': ')[1]
             except:
                 pass
-    if label is None:
-        raise ValueError('No label available. Is your code trying to load labels from the hidden data?')
-    return label
+    if murmur is None:
+        raise ValueError('No murmur available. Is your code trying to load labels from the hidden data?')
+    return murmur
+
+# Get outcome from patient data.
+def get_outcome(data):
+    outcome = None
+    for l in data.split('\n'):
+        if l.startswith('#Outcome:'):
+            try:
+                outcome = l.split(': ')[1]
+            except:
+                pass
+    if outcome is None:
+        raise ValueError('No outcome available. Is your code trying to load labels from the hidden data?')
+    return outcome
 
 # Sanitize binary values from Challenge outputs.
 def sanitize_binary_value(x):

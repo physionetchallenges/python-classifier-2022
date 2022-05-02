@@ -14,7 +14,7 @@ You can install the dependencies for these scripts by creating a Docker image (s
 
     pip install requirements.txt
 
-You can train you model by running
+You can train your model by running
 
     python train_model.py training_data model
 
@@ -23,7 +23,7 @@ where
 - `training_data` (input; required) is a folder with the training data files and
 - `model` (output; required) is a folder for saving your model.
 
-You can train you trained model by running
+You can run your trained model by running
 
     python run_model.py model test_data test_outputs
 
@@ -47,13 +47,13 @@ We will run the `train_model.py` and `run_model.py` scripts to train and run you
 
 Please edit the following script to add your training and testing code:
 
-* `team_code.py` is a script with functions for training and running your model.
+- `team_code.py` is a script with functions for training and running your model.
 
 Please do **not** edit the following scripts. We will use the unedited versions of these scripts when running your code:
 
-* `train_model.py` is a script for training your model.
-* `run_model.py` is a script for running your trained model.
-* `helper_code.py` is a script with helper functions that we used for our code. You are welcome to use them in your code.
+- `train_model.py` is a script for training your model.
+- `run_model.py` is a script for running your trained model.
+- `helper_code.py` is a script with helper functions that we used for our code. You are welcome to use them in your code.
 
 These scripts must remain in the root path of your repository, but you can put other scripts and other files elsewhere in your repository.
 
@@ -121,8 +121,8 @@ Please see the [Challenge website](https://physionetchallenges.org/2022/) for mo
 
 ## Useful links
 
-* [Challenge website](https://physionetchallenges.org/2022/)
-* [MATLAB example classifier code](https://github.com/physionetchallenges/matlab-classifier-2022)
-* [Scoring code](https://github.com/physionetchallenges/evaluation-2022)
-* [Frequently asked questions (FAQ) for this year's Challenge](https://physionetchallenges.org/2022/faq/) 
-* [Frequently asked questions (FAQ) about the Challenges in general](https://physionetchallenges.org/faq/) 
+- [Challenge website](https://physionetchallenges.org/2022/)
+- [MATLAB example classifier code](https://github.com/physionetchallenges/matlab-classifier-2022)
+- [Scoring code](https://github.com/physionetchallenges/evaluation-2022)
+- [Frequently asked questions (FAQ) for this year's Challenge](https://physionetchallenges.org/2022/faq/)
+- [Frequently asked questions (FAQ) about the Challenges in general](https://physionetchallenges.org/faq/)

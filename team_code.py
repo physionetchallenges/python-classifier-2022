@@ -26,7 +26,6 @@ def train_challenge_model(data_folder, model_folder, verbose):
     if verbose >= 1:
         print('Finding data files...')
 
-
     # Find the patient data files.
     patient_files = find_patient_files(data_folder)
     num_patient_files = len(patient_files)
@@ -37,15 +36,18 @@ def train_challenge_model(data_folder, model_folder, verbose):
     # Create a folder for the model if it does not already exist.
     os.makedirs(model_folder, exist_ok=True)
 
-    classes = ['Present', 'Unknown', 'Absent']
-    num_classes = len(classes)
-
     # Extract the features and labels.
     if verbose >= 1:
         print('Extracting features and labels from the Challenge data...')
 
+    murmur_classes = ['Present', 'Unknown', 'Absent']
+    num_murmur_classes = len(murmur_classes)
+    outcome_classes = ['Abnormal', 'Normal']
+    num_outcome_classes = len(outcome_classes)
+
     features = list()
-    labels = list()
+    murmurs = list()
+    outcomes = list()
 
     for i in range(num_patient_files):
         if verbose >= 2:
@@ -60,31 +62,40 @@ def train_challenge_model(data_folder, model_folder, verbose):
         features.append(current_features)
 
         # Extract labels and use one-hot encoding.
-        current_labels = np.zeros(num_classes, dtype=int)
-        label = get_label(current_patient_data)
-        if label in classes:
-            j = classes.index(label)
-            current_labels[j] = 1
-        labels.append(current_labels)
+        current_murmur = np.zeros(num_murmur_classes, dtype=int)
+        murmur = get_murmur(current_patient_data)
+        if murmur in murmur_classes:
+            j = murmur_classes.index(murmur)
+            current_murmur[j] = 1
+        murmurs.append(current_murmur)
+
+        current_outcome = np.zeros(num_outcome_classes, dtype=int)
+        outcome = get_outcome(current_patient_data)
+        if outcome in outcome_classes:
+            j = outcome_classes.index(outcome)
+            current_outcome[j] = 1
+        outcomes.append(current_outcome)
 
     features = np.vstack(features)
-    labels = np.vstack(labels)
+    murmurs = np.vstack(murmurs)
+    outcomes = np.vstack(outcomes)
 
     # Train the model.
     if verbose >= 1:
         print('Training model...')
 
     # Define parameters for random forest classifier.
-    n_estimators = 10    # Number of trees in the forest.
-    max_leaf_nodes = 100 # Maximum number of leaf nodes in each tree.
-    random_state = 123   # Random state; set for reproducibility.
+    n_estimators   = 123  # Number of trees in the forest.
+    max_leaf_nodes = 45   # Maximum number of leaf nodes in each tree.
+    random_state   = 6789 # Random state; set for reproducibility.
 
     imputer = SimpleImputer().fit(features)
     features = imputer.transform(features)
-    classifier = RandomForestClassifier(n_estimators=n_estimators, max_leaf_nodes=max_leaf_nodes, random_state=random_state).fit(features, labels)
+    murmur_classifier = RandomForestClassifier(n_estimators=n_estimators, max_leaf_nodes=max_leaf_nodes, random_state=random_state).fit(features, murmurs)
+    outcome_classifier = RandomForestClassifier(n_estimators=n_estimators, max_leaf_nodes=max_leaf_nodes, random_state=random_state).fit(features, outcomes)
 
     # Save the model.
-    save_challenge_model(model_folder, classes, imputer, classifier)
+    save_challenge_model(model_folder, imputer, murmur_classes, murmur_classifier, outcome_classes, outcome_classifier)
 
     if verbose >= 1:
         print('Done.')
@@ -98,9 +109,11 @@ def load_challenge_model(model_folder, verbose):
 # Run your trained model. This function is *required*. You should edit this function to add your code, but do *not* change the
 # arguments of this function.
 def run_challenge_model(model, data, recordings, verbose):
-    classes = model['classes']
     imputer = model['imputer']
-    classifier = model['classifier']
+    murmur_classes = model['murmur_classes']
+    murmur_classifier = model['murmur_classifier']
+    outcome_classes = model['outcome_classes']
+    outcome_classifier = model['outcome_classifier']
 
     # Load features.
     features = get_features(data, recordings)
@@ -110,13 +123,23 @@ def run_challenge_model(model, data, recordings, verbose):
     features = imputer.transform(features)
 
     # Get classifier probabilities.
-    probabilities = classifier.predict_proba(features)
-    probabilities = np.asarray(probabilities, dtype=np.float32)[:, 0, 1]
+    murmur_probabilities = murmur_classifier.predict_proba(features)
+    murmur_probabilities = np.asarray(murmur_probabilities, dtype=np.float32)[:, 0, 1]
+    outcome_probabilities = outcome_classifier.predict_proba(features)
+    outcome_probabilities = np.asarray(outcome_probabilities, dtype=np.float32)[:, 0, 1]
 
-    # Choose label with higher probability.
-    labels = np.zeros(len(classes), dtype=np.int_)
-    idx = np.argmax(probabilities)
-    labels[idx] = 1
+    # Choose label with highest probability.
+    murmur_labels = np.zeros(len(murmur_classes), dtype=np.int_)
+    idx = np.argmax(murmur_probabilities)
+    murmur_labels[idx] = 1
+    outcome_labels = np.zeros(len(outcome_classes), dtype=np.int_)
+    idx = np.argmax(outcome_probabilities)
+    outcome_labels[idx] = 1
+
+    # Concatenate classes, labels, and probabilities.
+    classes = murmur_classes + outcome_classes
+    labels = np.concatenate((murmur_labels, outcome_labels))
+    probabilities = np.concatenate((murmur_probabilities, outcome_probabilities))
 
     return classes, labels, probabilities
 
@@ -127,8 +150,8 @@ def run_challenge_model(model, data, recordings, verbose):
 ################################################################################
 
 # Save your trained model.
-def save_challenge_model(model_folder, classes, imputer, classifier):
-    d = {'classes': classes, 'imputer': imputer, 'classifier': classifier}
+def save_challenge_model(model_folder, imputer, murmur_classes, murmur_classifier, outcome_classes, outcome_classifier):
+    d = {'imputer': imputer, 'murmur_classes': murmur_classes, 'murmur_classifier': murmur_classifier, 'outcome_classes': outcome_classes, 'outcome_classifier': outcome_classifier}
     filename = os.path.join(model_folder, 'model.sav')
     joblib.dump(d, filename, protocol=0)
 
