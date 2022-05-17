@@ -9,7 +9,7 @@
 #
 ################################################################################
 
-from helper_code import *
+from helpers.helper_code import *
 import numpy as np, scipy as sp, scipy.stats, os, sys, joblib
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
