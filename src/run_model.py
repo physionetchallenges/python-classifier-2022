@@ -10,9 +10,8 @@
 # folder for saving your model's outputs.
 
 import numpy as np, os, sys
-from helpers.helper_code import *
+from helper_code import *
 from team_code import load_challenge_model, run_challenge_model
-
 
 # Run model.
 def run_model(model_folder, data_folder, output_folder, allow_failures, verbose):
