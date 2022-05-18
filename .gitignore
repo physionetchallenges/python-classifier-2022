@@ -162,5 +162,5 @@ cython_debug/
 #additional
 src/model/*
 src/data/*
+!src/data/README.md
 src/out/*
-src/data/raw/training_data/*
