@@ -2,8 +2,10 @@
 from helper_code import *
 import polars as pl
 import pandas as pd
+from scipy import signal
+from scipy.io import wavfile
 
-def load_training_data(data_folder, verbose):
+def load_training_data(data_folder):
     data_labels = ['a','b','c'] #TODO: implement data labels
 
     #Produce list of all patient .txt files, eg. ["folder1/folder2/patientfile1.txt", "folder1/folder2/patientfile2.txt", "..."]
@@ -24,7 +26,7 @@ def load_training_data(data_folder, verbose):
         current_patient_data = load_patient_data(patient_files[current_patient])
 
         #get list of all recordings for current patient, add each as a row to df
-        recordings = get_patient_recordings(current_patient_data)
+        recordings = list_patient_recordings(current_patient_data)
 
         #get features from patient data, fill in rows of df appropriately
 
@@ -32,9 +34,8 @@ def load_training_data(data_folder, verbose):
     
 
 #PURPOSE:   Returns the file name of all recordings (.wav file) listed in a given patient file. Does not specify path to file locations.
-#PARAMS:
-#   patient_data    str     patient data as a string, obtained using load_patient_data(find_patient_files(data_folder)) from helper_code.py
-#RETURNS:   list of str, each element stores the filename of one recording, list contains filenames of all recordings described by patient file
+#PARAMS:    patient_data    str     patient data as a string, obtained using load_patient_data(find_patient_files(data_folder)) from helper_code.py
+#RETURNS:   list of str - each element stores the filename of one recording, list contains filenames of all recordings described by patient file
 def list_patient_recordings(patient_data):
     recordings = list()
     num_locations = get_num_locations(patient_data)
@@ -48,3 +49,11 @@ def list_patient_recordings(patient_data):
         raise Exception("No recordings were found in the following patient data: \n*BEGIN PATIENT DATA* \n{} \n*END PATIENT DATA*".format(patient_data))
 
     return recordings
+
+#PURPOSE:   produces the spectogram of the specified .wav file
+#PARAMS:    wav_file    str     path to the .wav file
+#RETURNS:   ndarray of float32 - spectrogram of inputted .wav file
+def wav_to_spectrogram(wav_file):
+    sample_rate, samples = wavfile.read('data/raw_training/training_data/2530_AV.wav')
+    frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
+    return spectrogram
