@@ -1,0 +1,25 @@
+85226 3 4000
+PV 85226_PV.hea 85226_PV.wav 85226_PV.tsv
+TV 85226_TV.hea 85226_TV.wav 85226_TV.tsv
+MV 85226_MV.hea 85226_MV.wav 85226_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

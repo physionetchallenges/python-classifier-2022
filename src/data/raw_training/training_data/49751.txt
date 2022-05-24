@@ -1,0 +1,26 @@
+49751 4 4000
+AV 49751_AV.hea 49751_AV.wav 49751_AV.tsv
+PV 49751_PV.hea 49751_PV.wav 49751_PV.tsv
+TV 49751_TV.hea 49751_TV.wav 49751_TV.tsv
+MV 49751_MV.hea 49751_MV.wav 49751_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 101.0
+#Weight: 16.6
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 68175

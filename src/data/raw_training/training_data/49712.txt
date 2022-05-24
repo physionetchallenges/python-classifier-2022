@@ -1,0 +1,26 @@
+49712 4 4000
+AV 49712_AV.hea 49712_AV.wav 49712_AV.tsv
+PV 49712_PV.hea 49712_PV.wav 49712_PV.tsv
+TV 49712_TV.hea 49712_TV.wav 49712_TV.tsv
+MV 49712_MV.hea 49712_MV.wav 49712_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 133.0
+#Weight: 24.8
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Mid-systolic
+#Systolic murmur shape: Diamond
+#Systolic murmur grading: III/VI
+#Systolic murmur pitch: High
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 69120

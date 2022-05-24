@@ -1,0 +1,26 @@
+49754 4 4000
+AV 49754_AV.hea 49754_AV.wav 49754_AV.tsv
+PV 49754_PV.hea 49754_PV.wav 49754_PV.tsv
+TV 49754_TV.hea 49754_TV.wav 49754_TV.tsv
+MV 49754_MV.hea 49754_MV.wav 49754_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 144.0
+#Weight: 38.7
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Mid-systolic
+#Systolic murmur shape: Diamond
+#Systolic murmur grading: III/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 46778

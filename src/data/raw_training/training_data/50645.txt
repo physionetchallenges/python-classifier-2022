@@ -1,0 +1,26 @@
+50645 4 4000
+AV 50645_AV.hea 50645_AV.wav 50645_AV.tsv
+PV 50645_PV.hea 50645_PV.wav 50645_PV.tsv
+TV 50645_TV.hea 50645_TV.wav 50645_TV.tsv
+MV 50645_MV.hea 50645_MV.wav 50645_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 124.0
+#Weight: 23.6
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

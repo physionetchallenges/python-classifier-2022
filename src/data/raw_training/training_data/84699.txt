@@ -1,0 +1,26 @@
+84699 4 4000
+AV 84699_AV.hea 84699_AV.wav 84699_AV.tsv
+PV 84699_PV.hea 84699_PV.wav 84699_PV.tsv
+TV 84699_TV.hea 84699_TV.wav 84699_TV.tsv
+MV 84699_MV.hea 84699_MV.wav 84699_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

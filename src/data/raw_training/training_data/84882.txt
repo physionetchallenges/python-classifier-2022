@@ -1,0 +1,26 @@
+84882 4 4000
+AV 84882_AV.hea 84882_AV.wav 84882_AV.tsv
+PV 84882_PV.hea 84882_PV.wav 84882_PV.tsv
+TV 84882_TV.hea 84882_TV.wav 84882_TV.tsv
+MV 84882_MV.hea 84882_MV.wav 84882_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 125.0
+#Weight: 36.1
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

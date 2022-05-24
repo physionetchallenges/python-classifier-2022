@@ -1,0 +1,26 @@
+69096 4 4000
+AV 69096_AV.hea 69096_AV.wav 69096_AV.tsv
+PV 69096_PV.hea 69096_PV.wav 69096_PV.tsv
+TV 69096_TV.hea 69096_TV.wav 69096_TV.tsv
+MV 69096_MV.hea 69096_MV.wav 69096_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 91.0
+#Weight: 15.0
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+PV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 49638

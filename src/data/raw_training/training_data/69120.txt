@@ -1,0 +1,26 @@
+69120 4 4000
+AV 69120_AV.hea 69120_AV.wav 69120_AV.tsv
+PV 69120_PV.hea 69120_PV.wav 69120_PV.tsv
+TV 69120_TV.hea 69120_TV.wav 69120_TV.tsv
+MV 69120_MV.hea 69120_MV.wav 69120_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: High
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 49712

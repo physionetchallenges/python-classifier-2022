@@ -1,0 +1,25 @@
+50258 3 4000
+PV 50258_PV.hea 50258_PV.wav 50258_PV.tsv
+TV 50258_TV.hea 50258_TV.wav 50258_TV.tsv
+MV 50258_MV.hea 50258_MV.wav 50258_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 140.0
+#Weight: 33.7
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: TV
+#Most audible location: TV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

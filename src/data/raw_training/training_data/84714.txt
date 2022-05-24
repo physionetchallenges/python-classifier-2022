@@ -1,0 +1,25 @@
+84714 3 4000
+AV 84714_AV.hea 84714_AV.wav 84714_AV.tsv
+TV 84714_TV.hea 84714_TV.wav 84714_TV.tsv
+MV 84714_MV.hea 84714_MV.wav 84714_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 86.0
+#Weight: 10.2
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+TV
+#Most audible location: AV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Crescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

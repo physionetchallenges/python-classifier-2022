@@ -1,0 +1,26 @@
+84765 4 4000
+AV 84765_AV.hea 84765_AV.wav 84765_AV.tsv
+PV 84765_PV.hea 84765_PV.wav 84765_PV.tsv
+TV 84765_TV.hea 84765_TV.wav 84765_TV.tsv
+MV 84765_MV.hea 84765_MV.wav 84765_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 131.0
+#Weight: 34.2
+#Pregnancy status: False
+#Murmur: Unknown
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

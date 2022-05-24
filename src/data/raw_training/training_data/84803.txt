@@ -1,0 +1,26 @@
+84803 4 4000
+AV 84803_AV.hea 84803_AV.wav 84803_AV.tsv
+PV 84803_PV.hea 84803_PV.wav 84803_PV.tsv
+TV 84803_TV.hea 84803_TV.wav 84803_TV.tsv
+MV 84803_MV.hea 84803_MV.wav 84803_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

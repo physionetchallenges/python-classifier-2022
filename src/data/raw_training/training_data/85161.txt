@@ -1,0 +1,26 @@
+85161 4 4000
+AV 85161_AV.hea 85161_AV.wav 85161_AV.tsv
+PV 85161_PV.hea 85161_PV.wav 85161_PV.tsv
+TV 85161_TV.hea 85161_TV.wav 85161_TV.tsv
+MV 85161_MV.hea 85161_MV.wav 85161_MV.tsv
+#Age: Infant
+#Sex: Male
+#Height: 87.0
+#Weight: 12.5
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

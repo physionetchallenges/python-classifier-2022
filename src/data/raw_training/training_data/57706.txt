@@ -1,0 +1,26 @@
+57706 4 4000
+AV 57706_AV.hea 57706_AV.wav 57706_AV.tsv
+PV 57706_PV.hea 57706_PV.wav 57706_PV.tsv
+TV 57706_TV.hea 57706_TV.wav 57706_TV.tsv
+MV 57706_MV.hea 57706_MV.wav 57706_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 126.0
+#Weight: 24.7
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: II/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

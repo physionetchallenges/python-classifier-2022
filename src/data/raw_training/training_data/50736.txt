@@ -1,0 +1,25 @@
+50736 3 4000
+AV 50736_AV.hea 50736_AV.wav 50736_AV.tsv
+PV 50736_PV.hea 50736_PV.wav 50736_PV.tsv
+TV 50736_TV.hea 50736_TV.wav 50736_TV.tsv
+#Age: Child
+#Sex: Male
+#Height: 103.0
+#Weight: 18.7
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

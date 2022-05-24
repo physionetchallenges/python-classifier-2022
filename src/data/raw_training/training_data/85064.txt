@@ -1,0 +1,26 @@
+85064 4 4000
+AV 85064_AV.hea 85064_AV.wav 85064_AV.tsv
+PV 85064_PV.hea 85064_PV.wav 85064_PV.tsv
+TV 85064_TV.hea 85064_TV.wav 85064_TV.tsv
+MV 85064_MV.hea 85064_MV.wav 85064_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 160.0
+#Weight: 43.6
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

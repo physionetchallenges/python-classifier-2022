@@ -1,0 +1,23 @@
+50248 1 4000
+TV 50248_TV.hea 50248_TV.wav 50248_TV.tsv
+#Age: Child
+#Sex: Female
+#Height: 146.0
+#Weight: 50.2
+#Pregnancy status: False
+#Murmur: Unknown
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

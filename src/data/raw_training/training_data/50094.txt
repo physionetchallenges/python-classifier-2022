@@ -1,0 +1,25 @@
+50094 3 4000
+PV 50094_PV.hea 50094_PV.wav 50094_PV.tsv
+TV 50094_TV.hea 50094_TV.wav 50094_TV.tsv
+MV 50094_MV.hea 50094_MV.wav 50094_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

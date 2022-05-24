@@ -1,0 +1,25 @@
+50337 3 4000
+PV 50337_PV.hea 50337_PV.wav 50337_PV.tsv
+TV 50337_TV.hea 50337_TV.wav 50337_TV.tsv
+MV 50337_MV.hea 50337_MV.wav 50337_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

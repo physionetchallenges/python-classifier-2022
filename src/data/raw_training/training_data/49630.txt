@@ -1,0 +1,26 @@
+49630 4 4000
+AV 49630_AV.hea 49630_AV.wav 49630_AV.tsv
+PV 49630_PV.hea 49630_PV.wav 49630_PV.tsv
+TV 49630_TV.hea 49630_TV.wav 49630_TV.tsv
+MV 49630_MV.hea 49630_MV.wav 49630_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 180.0
+#Weight: 103.3
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: TV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 36327

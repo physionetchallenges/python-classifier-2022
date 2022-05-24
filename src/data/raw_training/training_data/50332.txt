@@ -1,0 +1,24 @@
+50332 2 4000
+AV 50332_AV.hea 50332_AV.wav 50332_AV.tsv
+MV 50332_MV.hea 50332_MV.wav 50332_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 60.0
+#Weight: 7.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV
+#Most audible location: AV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 68576

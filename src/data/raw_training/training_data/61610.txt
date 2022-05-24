@@ -1,0 +1,26 @@
+61610 4 4000
+AV 61610_AV.hea 61610_AV.wav 61610_AV.tsv
+PV 61610_PV.hea 61610_PV.wav 61610_PV.tsv
+TV 61610_TV.hea 61610_TV.wav 61610_TV.tsv
+MV 61610_MV.hea 61610_MV.wav 61610_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 140.0
+#Weight: 41.8
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

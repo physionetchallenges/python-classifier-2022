@@ -1,0 +1,26 @@
+45843 4 4000
+AV 45843_AV.hea 45843_AV.wav 45843_AV.tsv
+PV 45843_PV.hea 45843_PV.wav 45843_PV.tsv
+TV 45843_TV.hea 45843_TV.wav 45843_TV.tsv
+MV 45843_MV.hea 45843_MV.wav 45843_MV.tsv
+#Age: Adolescent
+#Sex: Female
+#Height: 141.0
+#Weight: 34.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+TV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 49821

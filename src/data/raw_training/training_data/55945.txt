@@ -1,0 +1,26 @@
+55945 4 4000
+AV 55945_AV.hea 55945_AV.wav 55945_AV.tsv
+PV 55945_PV.hea 55945_PV.wav 55945_PV.tsv
+TV 55945_TV.hea 55945_TV.wav 55945_TV.tsv
+MV 55945_MV.hea 55945_MV.wav 55945_MV.tsv
+#Age: Infant
+#Sex: Male
+#Height: 72.0
+#Weight: 8.8
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: AV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: II/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

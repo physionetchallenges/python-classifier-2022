@@ -1,0 +1,26 @@
+85148 4 4000
+AV 85148_AV.hea 85148_AV.wav 85148_AV.tsv
+PV 85148_PV.hea 85148_PV.wav 85148_PV.tsv
+TV 85148_TV.hea 85148_TV.wav 85148_TV.tsv
+MV 85148_MV.hea 85148_MV.wav 85148_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

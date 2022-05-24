@@ -1,0 +1,26 @@
+85033 4 4000
+AV 85033_AV.hea 85033_AV.wav 85033_AV.tsv
+PV 85033_PV.hea 85033_PV.wav 85033_PV.tsv
+TV 85033_TV.hea 85033_TV.wav 85033_TV.tsv
+MV 85033_MV.hea 85033_MV.wav 85033_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 136.0
+#Weight: 42.4
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

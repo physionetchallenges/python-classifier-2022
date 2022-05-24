@@ -1,0 +1,26 @@
+85163 4 4000
+AV 85163_AV.hea 85163_AV.wav 85163_AV.tsv
+PV 85163_PV.hea 85163_PV.wav 85163_PV.tsv
+TV 85163_TV.hea 85163_TV.wav 85163_TV.tsv
+MV 85163_MV.hea 85163_MV.wav 85163_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

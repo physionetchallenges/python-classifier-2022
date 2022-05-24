@@ -1,0 +1,24 @@
+49900 2 4000
+AV 49900_AV.hea 49900_AV.wav 49900_AV.tsv
+MV 49900_MV.hea 49900_MV.wav 49900_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 55.0
+#Weight: 5.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

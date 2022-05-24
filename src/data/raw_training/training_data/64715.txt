@@ -1,0 +1,25 @@
+64715 3 4000
+PV 64715_PV.hea 64715_PV.wav 64715_PV.tsv
+TV 64715_TV.hea 64715_TV.wav 64715_TV.tsv
+MV 64715_MV.hea 64715_MV.wav 64715_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 64.0
+#Weight: 10.5
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

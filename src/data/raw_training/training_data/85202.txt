@@ -1,0 +1,24 @@
+85202 2 4000
+AV 85202_AV.hea 85202_AV.wav 85202_AV.tsv
+MV 85202_MV.hea 85202_MV.wav 85202_MV.tsv
+#Age: Infant
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Unknown
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

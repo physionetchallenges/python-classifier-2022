@@ -1,0 +1,26 @@
+85080 4 4000
+AV 85080_AV.hea 85080_AV.wav 85080_AV.tsv
+PV 85080_PV.hea 85080_PV.wav 85080_PV.tsv
+TV 85080_TV.hea 85080_TV.wav 85080_TV.tsv
+MV 85080_MV.hea 85080_MV.wav 85080_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 116.0
+#Weight: 19.0
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: II/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

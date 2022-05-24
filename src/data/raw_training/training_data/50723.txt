@@ -1,0 +1,26 @@
+50723 4 4000
+AV 50723_AV.hea 50723_AV.wav 50723_AV.tsv
+PV 50723_PV.hea 50723_PV.wav 50723_PV.tsv
+TV 50723_TV.hea 50723_TV.wav 50723_TV.tsv
+MV 50723_MV.hea 50723_MV.wav 50723_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 154.0
+#Weight: 45.3
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

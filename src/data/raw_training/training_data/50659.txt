@@ -1,0 +1,26 @@
+50659 4 4000
+AV 50659_AV.hea 50659_AV.wav 50659_AV.tsv
+PV 50659_PV.hea 50659_PV.wav 50659_PV.tsv
+TV 50659_TV.hea 50659_TV.wav 50659_TV.tsv
+MV 50659_MV.hea 50659_MV.wav 50659_MV.tsv
+#Age: Adolescent
+#Sex: Female
+#Height: 163.0
+#Weight: 45.8
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 68886

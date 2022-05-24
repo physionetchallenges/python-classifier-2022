@@ -1,0 +1,24 @@
+50748 2 4000
+AV 50748_AV.hea 50748_AV.wav 50748_AV.tsv
+MV 50748_MV.hea 50748_MV.wav 50748_MV.tsv
+#Age: Infant
+#Sex: Male
+#Height: 71.0
+#Weight: 9.7
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

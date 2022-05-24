@@ -166,12 +166,6 @@ cython_debug/
 src/model/*
 !src/model/README.md
 
-src/data/raw_testing/*
-!src/data/raw_testing/README.md
-
-src/data/raw_training/*
-!src/data/raw_training/README.md
-
 src/out/*
 !src/out/README.md
 

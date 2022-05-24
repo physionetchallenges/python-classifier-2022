@@ -1,0 +1,24 @@
+50625 2 4000
+AV 50625_AV.hea 50625_AV.wav 50625_AV.tsv
+MV 50625_MV.hea 50625_MV.wav 50625_MV.tsv
+#Age: Infant
+#Sex: Male
+#Height: 60.0
+#Weight: 6.5
+#Pregnancy status: False
+#Murmur: Unknown
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 68857

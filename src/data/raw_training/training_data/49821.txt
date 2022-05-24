@@ -1,0 +1,26 @@
+49821 4 4000
+AV 49821_AV.hea 49821_AV.wav 49821_AV.tsv
+PV 49821_PV.hea 49821_PV.wav 49821_PV.tsv
+TV 49821_TV.hea 49821_TV.wav 49821_TV.tsv
+MV 49821_MV.hea 49821_MV.wav 49821_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 133.0
+#Weight: 29.2
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: III/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Musical
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: 45843

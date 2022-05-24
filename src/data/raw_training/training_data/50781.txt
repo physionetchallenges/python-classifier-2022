@@ -1,0 +1,26 @@
+50781 4 4000
+AV 50781_AV.hea 50781_AV.wav 50781_AV.tsv
+PV 50781_PV.hea 50781_PV.wav 50781_PV.tsv
+TV 50781_TV.hea 50781_TV.wav 50781_TV.tsv
+MV 50781_MV.hea 50781_MV.wav 50781_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 136.0
+#Weight: 31.3
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+PV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

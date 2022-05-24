@@ -1,0 +1,27 @@
+50263 5 4000
+AV 50263_AV.hea 50263_AV.wav 50263_AV.tsv
+PV 50263_PV.hea 50263_PV.wav 50263_PV.tsv
+TV 50263_TV_1.hea 50263_TV_1.wav 50263_TV_1.tsv
+TV 50263_TV_2.hea 50263_TV_2.wav 50263_TV_2.tsv
+MV 50263_MV.hea 50263_MV.wav 50263_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 135.0
+#Weight: 33.5
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

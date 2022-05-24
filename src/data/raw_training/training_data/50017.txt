@@ -1,0 +1,26 @@
+50017 4 4000
+AV 50017_AV.hea 50017_AV.wav 50017_AV.tsv
+PV 50017_PV.hea 50017_PV.wav 50017_PV.tsv
+TV 50017_TV.hea 50017_TV.wav 50017_TV.tsv
+MV 50017_MV.hea 50017_MV.wav 50017_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 176.0
+#Weight: 60.1
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

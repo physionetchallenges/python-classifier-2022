@@ -1,0 +1,26 @@
+85219 4 4000
+AV 85219_AV.hea 85219_AV.wav 85219_AV.tsv
+PV 85219_PV.hea 85219_PV.wav 85219_PV.tsv
+TV 85219_TV.hea 85219_TV.wav 85219_TV.tsv
+MV 85219_MV.hea 85219_MV.wav 85219_MV.tsv
+#Age: nan
+#Sex: Male
+#Height: 102.0
+#Weight: 16.0
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

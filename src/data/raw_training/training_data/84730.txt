@@ -1,0 +1,26 @@
+84730 4 4000
+AV 84730_AV.hea 84730_AV.wav 84730_AV.tsv
+PV 84730_PV.hea 84730_PV.wav 84730_PV.tsv
+TV 84730_TV.hea 84730_TV.wav 84730_TV.tsv
+MV 84730_MV.hea 84730_MV.wav 84730_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Present
+#Murmur locations: PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

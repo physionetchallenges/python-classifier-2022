@@ -1,0 +1,26 @@
+85038 4 4000
+AV 85038_AV.hea 85038_AV.wav 85038_AV.tsv
+PV 85038_PV.hea 85038_PV.wav 85038_PV.tsv
+TV 85038_TV.hea 85038_TV.wav 85038_TV.tsv
+MV 85038_MV.hea 85038_MV.wav 85038_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 70.0
+#Weight: 9.3
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

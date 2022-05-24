@@ -1,0 +1,26 @@
+77373 4 4000
+AV 77373_AV.hea 77373_AV.wav 77373_AV.tsv
+PV 77373_PV.hea 77373_PV.wav 77373_PV.tsv
+TV 77373_TV.hea 77373_TV.wav 77373_TV.tsv
+MV 77373_MV.hea 77373_MV.wav 77373_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 76.0
+#Weight: 9.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+TV
+#Most audible location: TV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

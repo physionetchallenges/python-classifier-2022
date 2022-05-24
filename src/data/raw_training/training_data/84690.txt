@@ -1,0 +1,25 @@
+84690 3 4000
+TV 84690_TV.hea 84690_TV.wav 84690_TV.tsv
+MV 84690_MV.hea 84690_MV.wav 84690_MV.tsv
+Phc 84690_Phc.hea 84690_Phc.wav 84690_Phc.tsv
+#Age: Child
+#Sex: Female
+#Height: 77.0
+#Weight: 9.5
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+Phc+TV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Diamond
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: High
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

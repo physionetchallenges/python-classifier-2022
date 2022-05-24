@@ -1,0 +1,24 @@
+78280 2 4000
+AV 78280_AV.hea 78280_AV.wav 78280_AV.tsv
+MV 78280_MV.hea 78280_MV.wav 78280_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 58.0
+#Weight: 4.48
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

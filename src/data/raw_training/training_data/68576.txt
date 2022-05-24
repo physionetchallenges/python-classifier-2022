@@ -1,0 +1,24 @@
+68576 2 4000
+AV 68576_AV.hea 68576_AV.wav 68576_AV.tsv
+MV 68576_MV.hea 68576_MV.wav 68576_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 75.0
+#Weight: 10.915
+#Pregnancy status: False
+#Murmur: Unknown
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 50332

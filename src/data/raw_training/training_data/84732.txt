@@ -1,0 +1,24 @@
+84732 2 4000
+AV 84732_AV.hea 84732_AV.wav 84732_AV.tsv
+MV 84732_MV.hea 84732_MV.wav 84732_MV.tsv
+#Age: Neonate
+#Sex: Female
+#Height: 49.0
+#Weight: 3.365
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV
+#Most audible location: MV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

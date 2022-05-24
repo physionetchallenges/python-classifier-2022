@@ -1,0 +1,26 @@
+84758 4 4000
+AV 84758_AV.hea 84758_AV.wav 84758_AV.tsv
+PV 84758_PV.hea 84758_PV.wav 84758_PV.tsv
+TV 84758_TV.hea 84758_TV.wav 84758_TV.tsv
+MV 84758_MV.hea 84758_MV.wav 84758_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

@@ -1,0 +1,26 @@
+50238 4 4000
+AV 50238_AV.hea 50238_AV.wav 50238_AV.tsv
+PV 50238_PV.hea 50238_PV.wav 50238_PV.tsv
+TV 50238_TV.hea 50238_TV.wav 50238_TV.tsv
+MV 50238_MV.hea 50238_MV.wav 50238_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 162.0
+#Weight: 47.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: MV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: II/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: Early-diastolic
+#Diastolic murmur shape: Decrescendo
+#Diastolic murmur grading: II/IV
+#Diastolic murmur pitch: Medium
+#Diastolic murmur quality: Blowing
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

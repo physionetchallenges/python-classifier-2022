@@ -1,0 +1,26 @@
+14241 4 4000
+AV 14241_AV.hea 14241_AV.wav 14241_AV.tsv
+PV 14241_PV.hea 14241_PV.wav 14241_PV.tsv
+TV 14241_TV.hea 14241_TV.wav 14241_TV.tsv
+MV 14241_MV.hea 14241_MV.wav 14241_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 87.0
+#Weight: 11.2
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: II/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

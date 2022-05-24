@@ -1,0 +1,26 @@
+36327 4 4000
+AV 36327_AV.hea 36327_AV.wav 36327_AV.tsv
+PV 36327_PV.hea 36327_PV.wav 36327_PV.tsv
+TV 36327_TV.hea 36327_TV.wav 36327_TV.tsv
+MV 36327_MV.hea 36327_MV.wav 36327_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 174.0
+#Weight: 108.6
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV+PV+TV
+#Most audible location: TV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 49630

@@ -1,0 +1,25 @@
+49824 3 4000
+AV 49824_AV.hea 49824_AV.wav 49824_AV.tsv
+PV 49824_PV.hea 49824_PV.wav 49824_PV.tsv
+MV 49824_MV.hea 49824_MV.wav 49824_MV.tsv
+#Age: Infant
+#Sex: Female
+#Height: 57.0
+#Weight: 3.9
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: Early-diastolic
+#Diastolic murmur shape: Decrescendo
+#Diastolic murmur grading: I/IV
+#Diastolic murmur pitch: High
+#Diastolic murmur quality: Harsh
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

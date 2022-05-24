@@ -1,0 +1,26 @@
+44514 4 4000
+AV 44514_AV.hea 44514_AV.wav 44514_AV.tsv
+PV 44514_PV.hea 44514_PV.wav 44514_PV.tsv
+TV 44514_TV.hea 44514_TV.wav 44514_TV.tsv
+MV 44514_MV.hea 44514_MV.wav 44514_MV.tsv
+#Age: Adolescent
+#Sex: Male
+#Height: 152.0
+#Weight: 39.5
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+TV
+#Most audible location: PV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: III/VI
+#Systolic murmur pitch: High
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

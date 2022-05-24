@@ -1,0 +1,26 @@
+68874 4 4000
+AV 68874_AV.hea 68874_AV.wav 68874_AV.tsv
+PV 68874_PV.hea 68874_PV.wav 68874_PV.tsv
+TV 68874_TV.hea 68874_TV.wav 68874_TV.tsv
+MV 68874_MV.hea 68874_MV.wav 68874_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: nan
+#Weight: nan
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: TV
+#Most audible location: TV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Blowing
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 50643

@@ -1,0 +1,26 @@
+84851 4 4000
+AV 84851_AV.hea 84851_AV.wav 84851_AV.tsv
+PV 84851_PV.hea 84851_PV.wav 84851_PV.tsv
+TV 84851_TV.hea 84851_TV.wav 84851_TV.tsv
+MV 84851_MV.hea 84851_MV.wav 84851_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 98.0
+#Weight: 15.1
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

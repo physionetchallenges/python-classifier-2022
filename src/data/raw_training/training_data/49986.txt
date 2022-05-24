@@ -1,0 +1,24 @@
+49986 2 4000
+AV 49986_AV.hea 49986_AV.wav 49986_AV.tsv
+MV 49986_MV.hea 49986_MV.wav 49986_MV.tsv
+#Age: Adolescent
+#Sex: Female
+#Height: 115.0
+#Weight: 18.6
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: 68213

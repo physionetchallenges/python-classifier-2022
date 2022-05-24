@@ -1,0 +1,27 @@
+50734 5 4000
+AV 50734_AV.hea 50734_AV.wav 50734_AV.tsv
+PV 50734_PV.hea 50734_PV.wav 50734_PV.tsv
+TV 50734_TV.hea 50734_TV.wav 50734_TV.tsv
+MV 50734_MV.hea 50734_MV.wav 50734_MV.tsv
+Phc 50734_Phc.hea 50734_Phc.wav 50734_Phc.tsv
+#Age: nan
+#Sex: Male
+#Height: 163.0
+#Weight: 73.0
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV+PV+Phc+TV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: III/VI
+#Systolic murmur pitch: Medium
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

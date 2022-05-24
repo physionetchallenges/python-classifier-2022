@@ -1,0 +1,24 @@
+50221 2 4000
+AV 50221_AV.hea 50221_AV.wav 50221_AV.tsv
+MV 50221_MV.hea 50221_MV.wav 50221_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 76.0
+#Weight: 10.4
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: AV+MV
+#Most audible location: MV
+#Systolic murmur timing: Early-systolic
+#Systolic murmur shape: Decrescendo
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Musical
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2014
+#Additional ID: nan

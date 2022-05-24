@@ -1,0 +1,26 @@
+39403 4 4000
+AV 39403_AV.hea 39403_AV.wav 39403_AV.tsv
+PV 39403_PV.hea 39403_PV.wav 39403_PV.tsv
+TV 39403_TV.hea 39403_TV.wav 39403_TV.tsv
+MV 39403_MV.hea 39403_MV.wav 39403_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 76.0
+#Weight: 9.05
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: nan

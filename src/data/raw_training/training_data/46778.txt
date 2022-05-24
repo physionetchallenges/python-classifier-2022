@@ -1,0 +1,23 @@
+46778 1 4000
+MV 46778_MV.hea 46778_MV.wav 46778_MV.tsv
+#Age: Adolescent
+#Sex: Female
+#Height: 150.0
+#Weight: 54.7
+#Pregnancy status: False
+#Murmur: Present
+#Murmur locations: MV
+#Most audible location: MV
+#Systolic murmur timing: Holosystolic
+#Systolic murmur shape: Plateau
+#Systolic murmur grading: I/VI
+#Systolic murmur pitch: Low
+#Systolic murmur quality: Harsh
+#Diastolic murmur timing: Early-diastolic
+#Diastolic murmur shape: Decrescendo
+#Diastolic murmur grading: I/IV
+#Diastolic murmur pitch: Low
+#Diastolic murmur quality: Blowing
+#Outcome: Abnormal
+#Campaign: CC2015
+#Additional ID: 49754

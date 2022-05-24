@@ -1,0 +1,26 @@
+84826 4 4000
+AV 84826_AV.hea 84826_AV.wav 84826_AV.tsv
+PV 84826_PV.hea 84826_PV.wav 84826_PV.tsv
+TV 84826_TV.hea 84826_TV.wav 84826_TV.tsv
+MV 84826_MV.hea 84826_MV.wav 84826_MV.tsv
+#Age: Child
+#Sex: Female
+#Height: 99.0
+#Weight: 14.3
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Normal
+#Campaign: CC2015
+#Additional ID: nan

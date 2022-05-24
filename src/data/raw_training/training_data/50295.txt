@@ -1,0 +1,26 @@
+50295 4 4000
+AV 50295_AV.hea 50295_AV.wav 50295_AV.tsv
+PV 50295_PV.hea 50295_PV.wav 50295_PV.tsv
+TV 50295_TV.hea 50295_TV.wav 50295_TV.tsv
+MV 50295_MV.hea 50295_MV.wav 50295_MV.tsv
+#Age: nan
+#Sex: Female
+#Height: nan
+#Weight: nan
+#Pregnancy status: True
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

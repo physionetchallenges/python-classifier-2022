@@ -1,0 +1,25 @@
+50206 3 4000
+PV 50206_PV.hea 50206_PV.wav 50206_PV.tsv
+TV 50206_TV.hea 50206_TV.wav 50206_TV.tsv
+MV 50206_MV.hea 50206_MV.wav 50206_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 149.0
+#Weight: 36.1
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan

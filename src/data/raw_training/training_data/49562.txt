@@ -1,0 +1,26 @@
+49562 4 4000
+AV 49562_AV.hea 49562_AV.wav 49562_AV.tsv
+PV 49562_PV.hea 49562_PV.wav 49562_PV.tsv
+TV 49562_TV.hea 49562_TV.wav 49562_TV.tsv
+MV 49562_MV.hea 49562_MV.wav 49562_MV.tsv
+#Age: Child
+#Sex: Male
+#Height: 122.0
+#Weight: 24.2
+#Pregnancy status: False
+#Murmur: Absent
+#Murmur locations: nan
+#Most audible location: nan
+#Systolic murmur timing: nan
+#Systolic murmur shape: nan
+#Systolic murmur grading: nan
+#Systolic murmur pitch: nan
+#Systolic murmur quality: nan
+#Diastolic murmur timing: nan
+#Diastolic murmur shape: nan
+#Diastolic murmur grading: nan
+#Diastolic murmur pitch: nan
+#Diastolic murmur quality: nan
+#Outcome: Abnormal
+#Campaign: CC2014
+#Additional ID: nan
