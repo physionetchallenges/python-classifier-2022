@@ -2,67 +2,105 @@ import os
 import polars as pl
 
 def ingestData(data_dir):
-
-    id = []
-
+    #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
     feature_list = {
+        'patient_id': [],
+        'num_locations': [],
+        'sampling_frequency': [],
+        'audio_files': [],
+        'recording_locations': [],
+        #begin named features
         'age': [],
         'sex': [],
         'height': [],
         'weight': [],
-        'pregnant': [],
+        'pregnancy_status': [],
         'murmur': [],
+        'murmur_locations': [],
+        'most_audible_location': [],
+        'sys_mur_timing': [],
+        'sys_mur_shape': [],
+        'sys_mur_grading': [],
+        'sys_mur_pitch': [],
+        'sys_mur_quality': [],
+        'dia_mur_timing': [],
+        'dia_mur_shape': [],
+        'dia_mur_grading': [],
+        'dia_mur_pitch': [],
+        'dia_mur_quality': [],
+        'outcome': [],
+        'campaign': [],
+        'additional_id': []
     }
 
-    starting_phrase = {
+    #features listed in feature_names are all listed in the patient txt file using the form "#" + name + ": " + value. Not all features obey this form, so this object does not store all features
+    #stores features and their identifying information as key-value pairs: key = (feature, str), value = (expected text representation of feature in .txt file, str)
+    feature_names = {
         'age': '#Age',
         'sex': '#Sex',
         'height': '#Height',
         'weight': '#Weight',
-        'pregnant': '#Pregnancy Status',
+        'pregnancy_status': '#Pregnancy Status',
         'murmur': '#Murmur',
+        'murmur_locations': '#Murmur locations',
+        'most_audible_location': '#Most audible location',
+        'sys_mur_timing': '#Systolic murmur timing',
+        'sys_mur_shape': '#Systolic murmur shape',
+        'sys_mur_grading': '#Systolic murmur grading',
+        'sys_mur_pitch': '#Systolic murmur pitch',
+        'sys_mur_quality': '#Systolic murmur quality',
+        'dia_mur_timing': '#Diastolic murmur timing',
+        'dia_mur_shape': '#Diastolic murmur shape',
+        'dia_mur_grading': '#Diastolic murmur grading',
+        'dia_mur_pitch': '#Diastolic murmur pitch',
+        'dia_mur_quality': '#Diastolic murmur quality',
+        'outcome': '#Outcome',
+        'campaign': '#Campaign',
+        'additional_id': '#Additional ID'
     }
 
-    audio_files = []
-
     print("Ingesting data from ", data_dir  )
-    # Loop through all text files in the data directory
     
+    # Loop through all text files in the data directory
     for file in os.listdir(data_dir):
         if file.endswith(".txt"):
             # Open text file
             with open(data_dir + "/" + file, "r") as f:
-
-                # Get first number, that is the id
-                patientID = f.readline().split(" ")[0]
-                id.append(patientID)       
-
                 
-                audio_array = []
-                for line in f:
+                #create temporary containers to store features with multiple values
+                patient_audio_files = {}
+                patient_recording_locations = []
 
-                    # find any words that end with .wav those are the audio files
-                    moving_line = line.strip().split(" ")
-                    for word in moving_line:
-                        if word.endswith(".wav"):
-                            audio_array.append(word)             
+                #iterate through each line in file
+                for line_number, line in enumerate(f):
 
-                    for current_feature in feature_list.keys():
-                        check_feature(line, starting_phrase[current_feature], feature_list[current_feature])
+                    #get info from first line: first number is patient_id, second number is num_locations, third number is sampling_frequency
+                    if line_number==0:
+                        first_line = f.readline().split(" ")
+                        patient_id, num_locations, sampling_frequency = first_line[0], first_line[1], first_line[2]
+                        feature_list['patient_id'].append(patient_id)
+                        feature_list['num_locations'].append(num_locations)
+                        feature_list['sampling_frequency'].append(sampling_frequency)
 
-                audio_files.append(audio_array)
+                    #get audio file names and locations, store as key-value pairs. also store locations in list of all recording locations
+                    elif line_number in [1, num_locations]:
+                        moving_line = line.strip().split(" ")
+                        current_recording_location, current_audio_file = moving_line[0], moving_line[2]
+                        patient_audio_files[current_audio_file] = current_recording_location
+                        patient_recording_locations.append(current_recording_location)
+
+                    #get named features
+                    elif line_number>num_locations:
+                        for current_named_feature in feature_names.keys():
+                            if line.startswith(feature_names[current_named_features] + ":"):
+                                feature_list[current_named_feature].append(line.split(': ', 1)[1].strip())
+
+                #push to feature_list all features that have not yet been stored there
+                feature_list[audio_files].append(patient_audio_files)
+                feature_list[recording_locations].append(patient_recording_locations)
 
     #Create a polars object to store the data
-    df = pl.DataFrame({
-        "id": id,
-        "age": age,
-        "sex": sex,
-        "height": height,
-        "weight": weight,
-        "pregnant": pregnant,
-        "murmur": murmur,
-        "audio_files": audio_files
-    })
+    df = pl.DataFrame(feature_list)
     
     return df
 
@@ -140,13 +178,13 @@ def invert_dict(dict_in):
         
 #PURPOSE:   checks whether the value of a given feature is defined in a given string; if it is, appends this value to var
 #PARAMS:    str_in      str     the string to check. function assumes this string has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.
-#           feature     str     the feature to check for
+#           check_for   str     the feature to check for
 #           var         list    the variable to append the value of the feature to, if applicable
-def check_feature(str_in, feature, var):
+def check_feature(str_in, check_for, var):
     if not ": " in str_in:
         raise Exception('Expected str_in to contain ": ". Function assumes str_in has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.')
     if not type(var)==list:
         raise Exception('var is not of type list')
 
-    if str_in.startswith(feature + ":"):
+    if str_in.startswith(check_for + ":"):
         var.append(str_in.split(": ", 1)[1].strip())
