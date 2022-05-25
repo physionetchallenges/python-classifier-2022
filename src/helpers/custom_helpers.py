@@ -69,10 +69,3 @@ def list_patient_recordings(patient_data):
 
     return recordings
 
-#PURPOSE:   produces the spectrogram of the specified .wav file
-#PARAMS:    wav_file    str     path to the .wav file
-#RETURNS:   ndarray of float32 - spectrogram of inputted .wav file
-def wav_to_spectrogram(wav_file):
-    sample_rate, samples = wavfile.read(wav_file)
-    frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
-    return spectrogram
