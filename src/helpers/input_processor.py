@@ -85,3 +85,28 @@ def ingestData(data_dir):
     })
     
     return df
+
+#PURPOSE:   Returns the file name of all recordings (.wav file) listed in a given patient file. Does not specify path to file locations.
+#PARAMS:    patient_data    str     patient data as a string, obtained using load_patient_data(find_patient_files(data_folder)) from helper_code.py
+#RETURNS:   list of str - each element stores the filename of one recording, list contains filenames of all recordings described by patient file
+def list_patient_recordings(patient_data):
+    recordings = list()
+    num_locations = get_num_locations(patient_data)
+
+    all_referenced_files = patient_data.split('\n')[1:num_locations+1]
+    for i in range(len(all_referenced_files)):
+        current_row = all_referenced_files[i].split(' ')
+        recordings.append(current_row[2])
+
+    if not recordings:
+        raise Exception("No recordings were found in the following patient data: \n*BEGIN PATIENT DATA* \n{} \n*END PATIENT DATA*".format(patient_data))
+
+    return recordings
+
+#PURPOSE:   produces the spectrogram of the specified .wav file
+#PARAMS:    wav_file    str     path to the .wav file
+#RETURNS:   ndarray of float32 - spectrogram of inputted .wav file
+def wav_to_spectro(wav_file):
+    sample_rate, samples = wavfile.read(wav_file)
+    frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
+    return spectrogram
