@@ -1,5 +1,6 @@
 import os
 import polars as pl
+import numpy
 
 def ingestData(data_dir):
     #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
@@ -76,8 +77,8 @@ def ingestData(data_dir):
 
                     #get info from first line: first number is patient_id, second number is num_locations, third number is sampling_frequency
                     if line_number==0:
-                        first_line = f.readline().split(" ")
-                        patient_id, num_locations, sampling_frequency = first_line[0], first_line[1], first_line[2]
+                        first_line = line.split(" ")
+                        patient_id, num_locations, sampling_frequency = int(first_line[0]), int(first_line[1]), int(first_line[2])
                         feature_list['patient_id'].append(patient_id)
                         feature_list['num_locations'].append(num_locations)
                         feature_list['sampling_frequency'].append(sampling_frequency)
@@ -92,12 +93,12 @@ def ingestData(data_dir):
                     #get named features
                     elif line_number>num_locations:
                         for current_named_feature in feature_names.keys():
-                            if line.startswith(feature_names[current_named_features] + ":"):
+                            if line.startswith(feature_names[current_named_feature] + ":"):
                                 feature_list[current_named_feature].append(line.split(': ', 1)[1].strip())
 
                 #push to feature_list all features that have not yet been stored there
-                feature_list[audio_files].append(patient_audio_files)
-                feature_list[recording_locations].append(patient_recording_locations)
+                feature_list['audio_files'].append(patient_audio_files)
+                feature_list['recording_locations'].append(patient_recording_locations)
 
     #Create a polars object to store the data
     df = pl.DataFrame(feature_list)
