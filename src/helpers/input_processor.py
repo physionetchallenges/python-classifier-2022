@@ -159,12 +159,12 @@ def invert_dict(dict_in):
     return dict_out
         
 #PURPOSE:   checks whether the value of a given feature is defined in a given string; if it is, appends this value to var
-#PARAMS:    str_in      str     the string to check. function assumes this string is the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.
+#PARAMS:    str_in      str     the string to check. function assumes this string has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.
 #           feature     str     the feature to check for
 #           var         list    the variable to append the value of the feature to, if applicable
 def check_feature(str_in, feature, var):
     if not ": " in str_in:
-        raise Exception('Expected str_in to contain ": ". Function assumes str_in is the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.')
+        raise Exception('Expected str_in to contain ": ". Function assumes str_in has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.')
     if not type(var)==list:
         raise Exception('var is not of type list')
 
