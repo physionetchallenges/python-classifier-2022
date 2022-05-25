@@ -5,23 +5,23 @@ def ingestData(data_dir):
 
     id = []
 
-    # nan, Adolescent, Infant, Child, Neonate
-    age = []
+    feature_list = {
+        'age': [],
+        'sex': [],
+        'height': [],
+        'weight': [],
+        'pregnant': [],
+        'murmur': [],
+    }
 
-    # Mail, Female
-    sex = []
-
-    # contains nan
-    height = []
-
-    # contains nan
-    weight = []
-
-    # True, False
-    pregnant = []
-
-    # Present, Absent, Unknown
-    murmur = []
+    starting_phrase = {
+        'age': '#Age',
+        'sex': '#Sex',
+        'height': '#Height',
+        'weight': '#Weight',
+        'pregnant': '#Pregnancy Status',
+        'murmur': '#Murmur',
+    }
 
     audio_files = []
 
@@ -47,29 +47,9 @@ def ingestData(data_dir):
                         if word.endswith(".wav"):
                             audio_array.append(word)             
 
-                    # Find line that starts with age
-                    if line.startswith("#Age:"):
-                        age.append(line.split(" ")[1].strip())
+                    for current_feature in feature_list.keys():
+                        check_feature(line, starting_phrase[current_feature], feature_list[current_feature])
 
-                    # Find line that starts with sex
-                    if line.startswith("#Sex:"):
-                        sex.append(line.split(" ")[1].strip())
-
-                    # Find line that starts with height
-                    if line.startswith("#Height:"):
-                        height.append(line.split(" ")[1].strip())
-
-                    # Find line that starts with weight
-                    if line.startswith("#Weight:"):
-                        weight.append(line.split(" ")[1].strip())
-                    
-                    # Find line that starts with pregnant
-                    if line.startswith("#Pregnancy status:"):
-                        pregnant.append(line.split(" ")[2].strip())
-
-                    # Find line that starts with murmur
-                    if line.startswith("#Murmur:"):
-                        murmur.append(line.split(" ")[1].strip())
                 audio_files.append(audio_array)
 
     #Create a polars object to store the data
