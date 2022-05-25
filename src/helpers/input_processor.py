@@ -111,8 +111,10 @@ def wav_to_spectro(wav_file):
     frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
     return spectrogram
 
-#PURPOSE:   loads a dictionary that allows for encoding patient features as numbers
-#RETURNS:   dict - a dict object where each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a possible value of the feature stored as a str, and the corresponding value is a number used to encode for it)
+#PURPOSE:   loads an invertable dictionary that allows for encoding/decoding patient features as numbers
+#RETURNS:   tuple - a tuple containing the following elements:
+#               dict - a dict object used to encode features. Each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a possible feature_value stored as a str, and the corresponding value is a number used to encode for the feature_value)
+#               dict - a dict object used to decode features. Each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a number used to encode for a feature_value, and the corresponding value is the feature_value stored as a str)
 def load_cipher():
     encode = {
     'Age':                      {'Neonate': 0.5, 'Infant': 6, 'Child': 6*12, 'Adolescent': 15*12, 'Young Adult': 20*12}, #represent each age group as the approximate number of months for the middle of the age group
@@ -134,8 +136,10 @@ def load_cipher():
     }
 
     decode = {}
-    for key, value in encode.items():
-        decode.append
+    for feature_name, feature_values in encode.items():
+        decode[feature_name] = invert_dict(feature_values)
+
+    return encode, decode
 
 
 #PURPOSE:   inverts a dict object that obeys one-to-one mapping of ley-value pairs; the key and value of any given original key-value pair are the value and key of the new key-value pair, respectively.
