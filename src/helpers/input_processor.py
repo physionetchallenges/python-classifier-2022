@@ -104,23 +104,6 @@ def ingestData(data_dir):
     
     return df
 
-#PURPOSE:   Returns the file name of all recordings (.wav file) listed in a given patient file. Does not specify path to file locations.
-#PARAMS:    patient_data    str     patient data as a string, obtained using load_patient_data(find_patient_files(data_folder)) from helper_code.py
-#RETURNS:   list of str - each element stores the filename of one recording, list contains filenames of all recordings described by patient file
-def list_patient_recordings(patient_data):
-    recordings = list()
-    num_locations = get_num_locations(patient_data)
-
-    all_referenced_files = patient_data.split('\n')[1:num_locations+1]
-    for i in range(len(all_referenced_files)):
-        current_row = all_referenced_files[i].split(' ')
-        recordings.append(current_row[2])
-
-    if not recordings:
-        raise Exception("No recordings were found in the following patient data: \n*BEGIN PATIENT DATA* \n{} \n*END PATIENT DATA*".format(patient_data))
-
-    return recordings
-
 #PURPOSE:   produces the spectrogram of the specified .wav file
 #PARAMS:    wav_file    str     path to the .wav file
 #RETURNS:   ndarray of float32 - spectrogram of inputted .wav file
@@ -160,7 +143,7 @@ def load_cipher():
     return encode, decode
 
 
-#PURPOSE:   inverts a dict object that obeys one-to-one mapping of ley-value pairs; the key and value of any given original key-value pair are the value and key of the new key-value pair, respectively.
+#PURPOSE:   inverts a dict object that obeys one-to-one mapping of key-value pairs; the key and value of any given original key-value pair are the value and key of the new key-value pair, respectively.
 #PARAMS:    dict_in     dict    the original dict object that is to be inverted
 #RETURNS:   dict - the inverted dict object
 def invert_dict(dict_in):
@@ -175,16 +158,3 @@ def invert_dict(dict_in):
         dict_out[value] = key
     
     return dict_out
-        
-#PURPOSE:   checks whether the value of a given feature is defined in a given string; if it is, appends this value to var
-#PARAMS:    str_in      str     the string to check. function assumes this string has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.
-#           check_for   str     the feature to check for
-#           var         list    the variable to append the value of the feature to, if applicable
-def check_feature(str_in, check_for, var):
-    if not ": " in str_in:
-        raise Exception('Expected str_in to contain ": ". Function assumes str_in has the form (str_in = some_feature + ": " + value), where (some_feature) is an arbitrary feature and (value) is the value of said feature.')
-    if not type(var)==list:
-        raise Exception('var is not of type list')
-
-    if str_in.startswith(check_for + ":"):
-        var.append(str_in.split(": ", 1)[1].strip())
