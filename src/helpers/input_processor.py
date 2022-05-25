@@ -110,3 +110,47 @@ def wav_to_spectro(wav_file):
     sample_rate, samples = wavfile.read(wav_file)
     frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
     return spectrogram
+
+#PURPOSE:   loads a dictionary that allows for encoding patient features as numbers
+#RETURNS:   dict - a dict object where each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a possible value of the feature stored as a str, and the corresponding value is a number used to encode for it)
+def load_cipher():
+    encode = {
+    'Age':                      {'Neonate': 0.5, 'Infant': 6, 'Child': 6*12, 'Adolescent': 15*12, 'Young Adult': 20*12}, #represent each age group as the approximate number of months for the middle of the age group
+    'Sex':                      {'Male': 0, 'Female': 1},
+    'Pregnancy status':         {'True': 1, 'False': 0},
+    'Murmur':                   {'Present': 1, 'Absent': 0, 'Unkown': 2},
+    'location':                 {'PV': 0, 'TV': 1, 'AV': 2, 'MV': 3, 'Phc': 4},
+    'Systolic murmur timing':   {'Early-systolic': 0, 'Holosystolic': 1, 'Mid-systolic': 2, 'Late-systolic': 3},
+    'Systolic murmur shape':    {'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3},
+    'Systolic murmur pitch':    {'Low': 0, 'Medium': 1, 'High': 2},
+    'Systolic murmur grading':  {'I/VI': 0, 'II/VI': 1, 'III/VI': 2},
+    'Systolic murmur quality':  {'Blowing': 0, 'Harsh': 1, 'Musical': 2},
+    'Diastolic murmur timing':  {'Early-diastolic': 0, 'Holodiastolic': 1, 'Mid-diastolic': 2},
+    'Diastolic murmur shape':   {'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3}, #note: only decresendo and plateau are actually used, other items are included for consistency with 'systolic murmur shape'
+    'Diastolic murmur pitch':   {'Low': 0, 'Medium': 1, 'High': 2},
+    'Diastolic murmur grading': {'I/IV': 0, 'II/IV': 1, 'III/IV': 2},
+    'Diastolic murmur quality': {'Blowing': 0, 'Harsh': 1, 'Musical': 2}, #note: only blowing and harsh are actually used, other items are included for consistency with 'systolic murmur quality'
+    'Outcome':                  {'Abnormal': 0, 'Normal': 1}
+    }
+
+    decode = {}
+    for key, value in encode.items():
+        decode.append
+
+
+#PURPOSE:   inverts a dict object that obeys one-to-one mapping of ley-value pairs; the key and value of any given original key-value pair are the value and key of the new key-value pair, respectively.
+#PARAMS:    dict_in     dict    the original dict object that is to be inverted
+#RETURNS:   dict - the inverted dict object
+def invert_dict(dict_in):
+    #check that dict_in obeys one to one mapping
+    keys_in = dict_in.keys()
+    values_in = dict_in.values()
+    if not (len(keys_in)==len(set(keys_in)) and len(values_in)==len(set(values_in))):
+        raise Exception('The inputted dict object does not obey one to one mapping of key-value pairs')
+
+    dict_out = {}
+    for key, value in dict_in.items():
+        dict_out[value] = key
+    
+    return dict_out
+        
