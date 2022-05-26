@@ -1,5 +1,6 @@
 import os
 import polars as pl
+import pandas as pd
 import numpy
 
 def ingestData(data_dir):
@@ -41,7 +42,7 @@ def ingestData(data_dir):
         'sex': '#Sex',
         'height': '#Height',
         'weight': '#Weight',
-        'pregnancy_status': '#Pregnancy Status',
+        'pregnancy_status': '#Pregnancy status',
         'murmur': '#Murmur',
         'murmur_locations': '#Murmur locations',
         'most_audible_location': '#Most audible location',
@@ -67,7 +68,8 @@ def ingestData(data_dir):
         if file.endswith(".txt"):
             # Open text file
             with open(data_dir + "/" + file, "r") as f:
-                
+                print('opening file ' + file)
+
                 #create temporary containers to store features with multiple values
                 patient_audio_files = {}
                 patient_recording_locations = []
@@ -100,8 +102,10 @@ def ingestData(data_dir):
                 feature_list['audio_files'].append(patient_audio_files)
                 feature_list['recording_locations'].append(patient_recording_locations)
 
-    #Create a polars object to store the data
-    df = pl.DataFrame(feature_list)
+                print('finished reading from file ' + file)
+
+    #Create a dataframe to store the data
+    df = pd.DataFrame(feature_list)
     
     return df
 
