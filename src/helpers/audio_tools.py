@@ -1,6 +1,7 @@
 from scipy import signal
 from scipy.io import wavfile
 from pydub import AudioSegment
+import librosa
 
 #####################################################################
 #  PURPOSE:   PRODUCES THE SPECTROGRAM OF THE SPECIFIED .WAV FILE   #
@@ -9,9 +10,11 @@ from pydub import AudioSegment
 #####################################################################
 
 def wav_to_spectrogram(wav_file):
-    sample_rate, samples = wavfile.read(wav_file)
-    frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate, nfft=1024)
-    return spectrogram
+    y, sr = librosa.load(wav_file)
+    # get window size
+    win = signal.get_window(sr ,window='hann')
+    S = librosa.feature.melspectrogram(y, sr=sr, n_fft=win)
+    return S
 
 def __match_amplitude(sound, target_dBFS):
     change_in_dBFS = target_dBFS - sound.dBFS
