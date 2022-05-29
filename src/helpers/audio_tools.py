@@ -56,4 +56,4 @@ def print_spectro(spectrogram, sample_rate, title=None, y_type='log'):
     img = librosa.display.specshow(spectrogram, sr=sample_rate, x_axis='time', y_axis=y_type, ax=ax)
     if not title==None:
         ax.set(title=title)
-    fig.colorbar(img, ax=ax)
+    fig.colorbar(img, ax=ax, format="%+2.f dB")
