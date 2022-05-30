@@ -1,65 +1,68 @@
 import os
 import polars as pl
-import numpy
+import numpy as np
 import helpers.audio_tools as adt
 
-def ingestData(data_dir):
+def ingestData(data_dir, nan, encode=False):
     #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
     feature_list = {
-        'patient_id': [],
-        'num_locations': [],
-        'sampling_frequency': [],
-        'audio_files': [],
-        'recording_locations': [],
+        'patient_id':           [],
+        'num_locations':        [],
+        'sampling_frequency':   [],
+        'audio_files':          [],
+        'recording_locations':  [],
         #begin named features
-        'age': [],
-        'sex': [],
-        'height': [],
-        'weight': [],
-        'pregnancy_status': [],
-        'murmur': [],
-        'murmur_locations': [],
-        'most_audible_location': [],
-        'sys_mur_timing': [],
-        'sys_mur_shape': [],
-        'sys_mur_grading': [],
-        'sys_mur_pitch': [],
-        'sys_mur_quality': [],
-        'dia_mur_timing': [],
-        'dia_mur_shape': [],
-        'dia_mur_grading': [],
-        'dia_mur_pitch': [],
-        'dia_mur_quality': [],
-        'outcome': [],
-        'campaign': [],
-        'additional_id': []
+        'age':                  [],
+        'sex':                  [],
+        'height':               [],
+        'weight':               [],
+        'pregnancy_status':     [],
+        'murmur':               [],
+        'murmur_locations':     [],
+        'most_audible_location':[],
+        'sys_mur_timing':       [],
+        'sys_mur_shape':        [],
+        'sys_mur_pitch':        [],
+        'sys_mur_grading':      [],
+        'sys_mur_quality':      [],
+        'dia_mur_timing':       [],
+        'dia_mur_shape':        [],
+        'dia_mur_pitch':        [],
+        'dia_mur_grading':      [],
+        'dia_mur_quality':      [],
+        'outcome':              [],
+        'campaign':             [],
+        'additional_id':        []
     }
 
     #features listed in feature_names are all listed in the patient txt file using the form "#" + name + ": " + value. Not all features obey this form, so this object does not store all features
     #stores features and their identifying information as key-value pairs: key = (feature, str), value = (expected text representation of feature in .txt file, str)
     feature_names = {
-        'age': '#Age',
-        'sex': '#Sex',
-        'height': '#Height',
-        'weight': '#Weight',
-        'pregnancy_status': '#Pregnancy status',
-        'murmur': '#Murmur',
-        'murmur_locations': '#Murmur locations',
-        'most_audible_location': '#Most audible location',
-        'sys_mur_timing': '#Systolic murmur timing',
-        'sys_mur_shape': '#Systolic murmur shape',
-        'sys_mur_grading': '#Systolic murmur grading',
-        'sys_mur_pitch': '#Systolic murmur pitch',
-        'sys_mur_quality': '#Systolic murmur quality',
-        'dia_mur_timing': '#Diastolic murmur timing',
-        'dia_mur_shape': '#Diastolic murmur shape',
-        'dia_mur_grading': '#Diastolic murmur grading',
-        'dia_mur_pitch': '#Diastolic murmur pitch',
-        'dia_mur_quality': '#Diastolic murmur quality',
-        'outcome': '#Outcome',
-        'campaign': '#Campaign',
-        'additional_id': '#Additional ID'
+        'age':                  '#Age',
+        'sex':                  '#Sex',
+        'height':               '#Height',
+        'weight':               '#Weight',
+        'pregnancy_status':     '#Pregnancy status',
+        'murmur':               '#Murmur',
+        'murmur_locations':     '#Murmur locations',
+        'most_audible_location':'#Most audible location',
+        'sys_mur_timing':       '#Systolic murmur timing',
+        'sys_mur_shape':        '#Systolic murmur shape',
+        'sys_mur_pitch':        '#Systolic murmur pitch',
+        'sys_mur_grading':      '#Systolic murmur grading',
+        'sys_mur_quality':      '#Systolic murmur quality',
+        'dia_mur_timing':       '#Diastolic murmur timing',
+        'dia_mur_shape':        '#Diastolic murmur shape',
+        'dia_mur_pitch':        '#Diastolic murmur pitch',
+        'dia_mur_grading':      '#Diastolic murmur grading',
+        'dia_mur_quality':      '#Diastolic murmur quality',
+        'outcome':              '#Outcome',
+        'campaign':             '#Campaign',
+        'additional_id':        '#Additional ID'
     }
+
+    #load cipher for encoding features as numbers
+    encode, decode = load_cipher(nan)
 
     print("Ingesting data from ", data_dir  )
     
@@ -88,33 +91,64 @@ def ingestData(data_dir):
                     elif line_number in range(1, num_locations+1):
                         moving_line = line.strip().split(" ")
                         current_recording_location, current_audio_file = moving_line[0], moving_line[2]
+
+                        #encode features
+                        if encode:
+                            current_recording_location = encode['recording_locations'][current_recording_location]
+
                         patient_audio_files.append(current_audio_file)
                         patient_recording_locations.append(current_recording_location)
 
                     #get named features
                     elif line_number>num_locations:
+                        #determine which feature is defined in this line and read data accordingly
                         for current_named_feature in feature_names.keys():
                             if line.startswith(feature_names[current_named_feature] + ":"):
-                                feature_list[current_named_feature].append(line.split(': ', 1)[1].strip())
+                                val = line.split(': ', 1)[1].strip()
+                                if current_named_feature=='murmur_locations':
+                                    val = val.split('+')
+
+                                #encode features
+                                if encode:
+                                    if current_named_feature in ['height', 'weight']: #convert to int
+                                        if val=='nan':
+                                            val = nan
+                                        else:
+                                            val = int(float(val))
+                                    elif current_named_feature=='murmur_locations': #encode strings in list as numbers
+                                        for i, entry in enumerate(val):
+                                            val[i] = encode[current_named_feature][entry]
+                                    elif not current_named_feature in ['campaign', 'additional_id']: #encode string as number
+                                        val = encode[current_named_feature][val]
+
+                                feature_list[current_named_feature].append(val)
+
 
                 #push to feature_list all features that have not yet been stored there
                 feature_list['audio_files'].append(patient_audio_files)
                 feature_list['recording_locations'].append(patient_recording_locations)
 
-    print('finished reading from file ' + file)
+    print('finished reading from files')
 
     #Create a dataframe to store the data
     df = pl.DataFrame(feature_list)
     
     return df
 
+#TODO: when exploding audio,files, only some locations have murmurs, address this
+
 #PURPOSE:   load training data for input into ML model
 #PARAMS:    data_dir    str         path to directory containing training data files
 #           features    list(str)   list of features to pass to ML model
 #RETURNS:   pl.DataFrame    dataframe storing spectrograms and features
-def load_training_data(data_dir, features):
+def load_training_data(features, data_dir, nan, encode=False):
+
     #load data into dataframe
-    df = ingestData(data_dir)
+    df = ingestData(data_dir, nan, encode=encode)
+
+    #interpret features=['*']
+    if features==['*']:
+        features = df.columns
 
     #get the spectrograms for each wav file, add as column to df
     df = df.explode('audio_files').with_column(
@@ -128,27 +162,30 @@ def load_training_data(data_dir, features):
     return out
 
 #PURPOSE:   loads an invertable dictionary that allows for encoding/decoding patient features as numbers
+#PARAMS:    nan     any     value to encode 'nan' entries as
 #RETURNS:   tuple - a tuple containing the following elements:
 #               dict - a dict object used to encode features. Each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a possible feature_value stored as a str, and the corresponding value is a number used to encode for the feature_value)
 #               dict - a dict object used to decode features. Each key stores the name of a feature as a string, and the corresponding value is a dict object (where each key is a number used to encode for a feature_value, and the corresponding value is the feature_value stored as a str)
-def load_cipher():
+def load_cipher(nan):
     encode = {
-    'Age':                      {'Neonate': 0.5, 'Infant': 6, 'Child': 6*12, 'Adolescent': 15*12, 'Young Adult': 20*12}, #represent each age group as the approximate number of months for the middle of the age group
-    'Sex':                      {'Male': 0, 'Female': 1},
-    'Pregnancy status':         {'True': 1, 'False': 0},
-    'Murmur':                   {'Present': 1, 'Absent': 0, 'Unkown': 2},
-    'location':                 {'PV': 0, 'TV': 1, 'AV': 2, 'MV': 3, 'Phc': 4},
-    'Systolic murmur timing':   {'Early-systolic': 0, 'Holosystolic': 1, 'Mid-systolic': 2, 'Late-systolic': 3},
-    'Systolic murmur shape':    {'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3},
-    'Systolic murmur pitch':    {'Low': 0, 'Medium': 1, 'High': 2},
-    'Systolic murmur grading':  {'I/VI': 0, 'II/VI': 1, 'III/VI': 2},
-    'Systolic murmur quality':  {'Blowing': 0, 'Harsh': 1, 'Musical': 2},
-    'Diastolic murmur timing':  {'Early-diastolic': 0, 'Holodiastolic': 1, 'Mid-diastolic': 2},
-    'Diastolic murmur shape':   {'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3}, #note: only decresendo and plateau are actually used, other items are included for consistency with 'systolic murmur shape'
-    'Diastolic murmur pitch':   {'Low': 0, 'Medium': 1, 'High': 2},
-    'Diastolic murmur grading': {'I/IV': 0, 'II/IV': 1, 'III/IV': 2},
-    'Diastolic murmur quality': {'Blowing': 0, 'Harsh': 1, 'Musical': 2}, #note: only blowing and harsh are actually used, other items are included for consistency with 'systolic murmur quality'
-    'Outcome':                  {'Abnormal': 0, 'Normal': 1}
+        'recording_locations':  {'nan': nan, 'PV': 0, 'TV': 1, 'AV': 2, 'MV': 3, 'Phc': 4},
+        'age':                  {'nan': nan, 'Neonate': 2, 'Infant': 26, 'Child': 6*52, 'Adolescent': 15*52, 'Young Adult': 20*52}, #represent each age group as the approximate number of weeks for the middle of the age group
+        'sex':                  {'nan': nan, 'Male': 0, 'Female': 1},
+        'pregnancy_status':     {'nan': nan, 'True': 1, 'False': 0},
+        'murmur':               {'nan': nan, 'Present': 1, 'Absent': 0, 'Unknown': 2},
+        'murmur_locations':     {'nan': nan, 'PV': 0, 'TV': 1, 'AV': 2, 'MV': 3, 'Phc': 4},
+        'most_audible_location':{'nan': nan, 'PV': 0, 'TV': 1, 'AV': 2, 'MV': 3, 'Phc': 4},
+        'sys_mur_timing':       {'nan': nan, 'Early-systolic': 0, 'Holosystolic': 1, 'Mid-systolic': 2, 'Late-systolic': 3},
+        'sys_mur_shape':        {'nan': nan, 'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3},
+        'sys_mur_pitch':        {'nan': nan, 'Low': 0, 'Medium': 1, 'High': 2},
+        'sys_mur_grading':      {'nan': nan, 'I/VI': 0, 'II/VI': 1, 'III/VI': 2},
+        'sys_mur_quality':      {'nan': nan, 'Blowing': 0, 'Harsh': 1, 'Musical': 2},
+        'dia_mur_timing':       {'nan': nan, 'Early-diastolic': 0, 'Holodiastolic': 1, 'Mid-diastolic': 2},
+        'dia_mur_shape':        {'nan': nan, 'Crescendo': 0, 'Decrescendo': 1, 'Diamond': 2, 'Plateau': 3}, #note: only decresendo and plateau are actually used, other items are included for consistency with 'systolic murmur shape'
+        'dia_mur_pitch':        {'nan': nan, 'Low': 0, 'Medium': 1, 'High': 2},
+        'dia_mur_grading':      {'nan': nan, 'I/IV': 0, 'II/IV': 1, 'III/IV': 2},
+        'dia_mur_quality':      {'nan': nan, 'Blowing': 0, 'Harsh': 1, 'Musical': 2}, #note: only blowing and harsh are actually used, other items are included for consistency with 'systolic murmur quality'
+        'outcome':              {'nan': nan, 'Abnormal': 0, 'Normal': 1}
     }
 
     decode = {}
