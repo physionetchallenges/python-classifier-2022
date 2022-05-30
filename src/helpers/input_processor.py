@@ -108,9 +108,11 @@ def ingestData(data_dir):
     
     return df
 
-def load_training_data(data_dir):
-    features = ['murmur'] #list of features to pass to ML model
-
+#PURPOSE:   load training data for input into ML model
+#PARAMS:    data_dir    str         path to directory containing training data files
+#           features    list(str)   list of features to pass to ML model
+#RETURNS:   pl.DataFrame    dataframe storing spectrograms and features
+def load_training_data(data_dir, features):
     #load data into dataframe
     df = ingestData(data_dir)
 
