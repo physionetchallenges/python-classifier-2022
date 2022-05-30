@@ -51,4 +51,3 @@ def load_training_data(data_folder):
         #get features from patient data, fill in rows of df appropriately
 
         #append df to master_df
-    
