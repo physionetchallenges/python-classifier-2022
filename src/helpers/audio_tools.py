@@ -29,26 +29,22 @@ def __match_amplitude(sound, target_dBFS):
 #    sound = __match_amplitude(sound, target_dBFS)
 #    sound.export(wav_file, format="wav")
 
-#PURPOSE:   load the spectrogram of a .wav audio file(s)
-#PARAMS:    sample_rate         int     sample rate of the wav file (must be the same for all wav files inputted)
-#           *wav_file           str     path(s) to the wav file(s)
+#PURPOSE:   load the spectrogram of a .wav audio file
+#PARAMS:    wav_file            str     path to the wav file
+#           sample_rate         int     sample rate of the wav file
 #           print_spectrogram   Bool    [OPTIONAL] print the spectrogram: True OR False, default=False
 #           title               str     [OPTIONAL] (if print_spectro=True) title of the printed spectrogram: str, default=None
 #           y_type              str     [OPTIONAL] (if print_spectro=True) scale to use for the y axis: 'log' OR 'linear', default='log'
 #RETURN:    ndarray     spectrogram of the wav file
-def wav_to_spectro(sample_rate, *wav_file, print_spectrogram=False, title=None, y_type='log'):
-    spectrograms = []
-    for f in wav_file:
-        waveform, sr = librosa.load(f, sr=sample_rate)
-        x = librosa.stft(waveform)  #STFT of waveform
-        x_db = librosa.amplitude_to_db(np.abs(x))   #map the magnitudes of x to a decibel scale
+def wav_to_spectro(wav_file, sample_rate, print_spectrogram=False, title=None, y_type='log'):
+    waveform, sr = librosa.load(wav_file, sr=sample_rate)
+    x = librosa.stft(waveform)  #STFT of waveform
+    x_db = librosa.amplitude_to_db(np.abs(x))   #map the magnitudes of x to a decibel scale
 
-        if print_spectrogram:
-            print_spectro(x_db, sample_rate, title = title, y_type=y_type)
+    if print_spectrogram:
+        print_spectro(x_db, sample_rate, title = title, y_type=y_type)
 
-        spectrograms.append(x_db)
-
-    return tuple(spectrograms)
+    return x_db
 
 #PURPOSE:   print a spectrogram
 #PARAMS:    spectrogram     ndarray     spectrogram to print
