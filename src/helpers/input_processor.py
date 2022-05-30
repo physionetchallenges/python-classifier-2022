@@ -3,7 +3,7 @@ import polars as pl
 import pandas as pd
 import numpy
 
-def ingestData(data_dir):
+def ingestData_alt(data_dir):
     #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
     feature_list = {
         'patient_id': [],
@@ -68,10 +68,9 @@ def ingestData(data_dir):
         if file.endswith(".txt"):
             # Open text file
             with open(data_dir + "/" + file, "r") as f:
-                print('opening file ' + file)
 
                 #create temporary containers to store features with multiple values
-                patient_audio_files = {}
+                patient_audio_files = []
                 patient_recording_locations = []
 
                 #iterate through each line in file
@@ -85,11 +84,11 @@ def ingestData(data_dir):
                         feature_list['num_locations'].append(num_locations)
                         feature_list['sampling_frequency'].append(sampling_frequency)
 
-                    #get audio file names and locations, store as key-value pairs. also store locations in list of all recording locations
-                    elif line_number in [1, num_locations]:
+                    #get audio file names
+                    elif line_number in range(1, num_locations+1):
                         moving_line = line.strip().split(" ")
                         current_recording_location, current_audio_file = moving_line[0], moving_line[2]
-                        patient_audio_files[current_audio_file] = current_recording_location
+                        patient_audio_files.append(current_audio_file)
                         patient_recording_locations.append(current_recording_location)
 
                     #get named features
@@ -102,10 +101,10 @@ def ingestData(data_dir):
                 feature_list['audio_files'].append(patient_audio_files)
                 feature_list['recording_locations'].append(patient_recording_locations)
 
-                print('finished reading from file ' + file)
+    print('finished reading from file ' + file)
 
     #Create a dataframe to store the data
-    df = pd.DataFrame(feature_list)
+    df = pl.DataFrame(feature_list)
     
     return df
 
