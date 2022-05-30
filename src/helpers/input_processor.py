@@ -1,9 +1,9 @@
 import os
 import polars as pl
-import pandas as pd
 import numpy
+import helpers.audio_tools as adt
 
-def ingestData_alt(data_dir):
+def ingestData(data_dir):
     #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
     feature_list = {
         'patient_id': [],
@@ -108,13 +108,11 @@ def ingestData_alt(data_dir):
     
     return df
 
-def load_training_data():
-    data_dir = "data/raw_training/training_data"
-
+def load_training_data(data_dir):
     features = ['murmur'] #list of features to pass to ML model
 
     #load data into dataframe
-    df = altip.ingestData_alt(data_dir)
+    df = ingestData(data_dir)
 
     #get the spectrograms for each wav file, add as column to df
     df = df.explode('audio_files').with_column(
