@@ -108,7 +108,24 @@ def ingestData_alt(data_dir):
     
     return df
 
+def load_training_data():
+    data_dir = "data/raw_training/training_data"
 
+    features = ['murmur'] #list of features to pass to ML model
+
+    #load data into dataframe
+    df = altip.ingestData_alt(data_dir)
+
+    #get the spectrograms for each wav file, add as column to df
+    df = df.explode('audio_files').with_column(
+        pl.struct([pl.col('audio_files').str.replace(r"^", data_dir + '/').alias('file_paths'), 'sampling_frequency']) #specifiy the path to the wav files
+        .apply(lambda x: adt.wav_to_spectro(x['file_paths'], x['sampling_frequency'])).alias('spectrogram') #call wav_to_spectro for each wav file
+    )
+
+    #get the spectrograms with the desired features
+    out = df.select(pl.col(['spectrogram', *features]))
+
+    return out
 
 #PURPOSE:   loads an invertable dictionary that allows for encoding/decoding patient features as numbers
 #RETURNS:   tuple - a tuple containing the following elements:
