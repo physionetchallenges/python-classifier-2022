@@ -1,65 +1,39 @@
 import os
+from pydoc import cli
 import polars as pl
 import numpy as np
 import helpers.audio_tools as adt
+from lut import clinical_iterables, clinical_data
 
-def ingestData(data_dir, nan, encode=False):
-    #feature_list stores all features and feature values as key-value pairs: key = (feature, str), value = (feature value, list)
-    feature_list = {
-        'patient_id':           [],
-        'num_locations':        [],
-        'sampling_frequency':   [],
-        'audio_files':          [],
-        'recording_locations':  [],
-        #begin named features
-        'age':                  [],
-        'sex':                  [],
-        'height':               [],
-        'weight':               [],
-        'pregnancy_status':     [],
-        'murmur':               [],
-        'murmur_locations':     [],
-        'most_audible_location':[],
-        'sys_mur_timing':       [],
-        'sys_mur_shape':        [],
-        'sys_mur_pitch':        [],
-        'sys_mur_grading':      [],
-        'sys_mur_quality':      [],
-        'dia_mur_timing':       [],
-        'dia_mur_shape':        [],
-        'dia_mur_pitch':        [],
-        'dia_mur_grading':      [],
-        'dia_mur_quality':      [],
-        'outcome':              [],
-        'campaign':             [],
-        'additional_id':        []
-    }
 
+
+def ingestDataV2(data_dir):
+    print("Ingesting data from ", data_dir  )
+
+    iterables = clinical_iterables.copy()
+    data = clinical_data.copy()
+
+    for file in os.listdir(data_dir):
+        if file.endswith(".txt"):
+            # open text file
+            with open(data_dir + "/" + file, "r") as f:
+                # loop through each line to check if it maches with an iterables
+                for line in f:
+                    for iterable in iterables:
+                        if line.startswith(iterable):
+                            # get the value of the iterable
+                            value = line.split(': ', 1)[1].strip()
+                            # add the value to the data
+                            data[iterable].append(value)
+
+#############################################################
+
+def ingestData(data_dir, nan, encode=False): 
+
+    
     #features listed in feature_names are all listed in the patient txt file using the form "#" + name + ": " + value. Not all features obey this form, so this object does not store all features
     #stores features and their identifying information as key-value pairs: key = (feature, str), value = (expected text representation of feature in .txt file, str)
-    feature_names = {
-        'age':                  '#Age',
-        'sex':                  '#Sex',
-        'height':               '#Height',
-        'weight':               '#Weight',
-        'pregnancy_status':     '#Pregnancy status',
-        'murmur':               '#Murmur',
-        'murmur_locations':     '#Murmur locations',
-        'most_audible_location':'#Most audible location',
-        'sys_mur_timing':       '#Systolic murmur timing',
-        'sys_mur_shape':        '#Systolic murmur shape',
-        'sys_mur_pitch':        '#Systolic murmur pitch',
-        'sys_mur_grading':      '#Systolic murmur grading',
-        'sys_mur_quality':      '#Systolic murmur quality',
-        'dia_mur_timing':       '#Diastolic murmur timing',
-        'dia_mur_shape':        '#Diastolic murmur shape',
-        'dia_mur_pitch':        '#Diastolic murmur pitch',
-        'dia_mur_grading':      '#Diastolic murmur grading',
-        'dia_mur_quality':      '#Diastolic murmur quality',
-        'outcome':              '#Outcome',
-        'campaign':             '#Campaign',
-        'additional_id':        '#Additional ID'
-    }
+
 
     #load cipher for encoding features as numbers
     encode, decode = load_cipher(nan)
@@ -132,6 +106,7 @@ def ingestData(data_dir, nan, encode=False):
 
     #Create a dataframe to store the data
     df = pl.DataFrame(feature_list)
+    
     
     return df
 
