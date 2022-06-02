@@ -3,7 +3,7 @@ from pydoc import cli
 import polars as pl
 import numpy as np
 import helpers.audio_tools as adt
-from lut import clinical_iterables, clinical_data
+from .lut import clinical_iterables, clinical_data
 import copy 
 
 
@@ -24,7 +24,6 @@ def ingestData(data_dir):
                 data['patient_id'].append(line[0])
                 data['num_locations'].append(line[1])
                 data['sampling_frequency'].append(line[2])
-                
                 # loop through each line to check if it maches with an iterables
                 audio_files = []
                 recording_locations = []
@@ -35,8 +34,6 @@ def ingestData(data_dir):
                         line_split = line.split(" ")
                         audio_files.append(line_split[2]) 
                         recording_locations.append(line_split[0]) 
-
-
                     for iterable in clinical_iterables:
                         if line.startswith(clinical_iterables[iterable] + ":"):
                             # get the value of the iterable
@@ -47,9 +44,6 @@ def ingestData(data_dir):
                 data['recording_locations'].append(recording_locations)
     df = pl.DataFrame(data)
     return df
-
-
-#TODO: when exploding audio,files, only some locations have murmurs, address this
 
 #PURPOSE:   load training data for input into ML model
 #PARAMS:    data_dir    str         path to directory containing training data files
