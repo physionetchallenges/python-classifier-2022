@@ -21,7 +21,7 @@ You can train your model by running
 where
 
 - `training_data` (input; required) is a folder with the training data files and
-- `model` (output; required) is a folder for saving your model.
+- `model` (input; required) is a folder for saving your model.
 
 You can run your trained model by running
 
